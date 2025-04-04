@@ -2,33 +2,47 @@ import streamlit as st
 import google.generativeai as genai
 from docx import Document
 
-# Cấu hình API
-genai.configure(api_key="YOUR_API_KEY_HERE")  # Thay YOUR_API_KEY_HERE bằng API key thật
-
+# 🔐 Cấu hình Gemini API từ secrets
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel("gemini-pro")
 
+# 🚀 Cài đặt giao diện
 st.set_page_config(page_title="📑 ISO ChatBot với Gemini", layout="wide")
 st.title("📑 Trợ lý truy vấn tài liệu ISO với Gemini")
 
-# Tải file ISO
+# 📂 Upload file .docx
 uploaded_file = st.file_uploader("📤 Tải tài liệu ISO (.docx)", type=["docx"])
 
-if uploaded_file:
-    # Đọc nội dung file Word
-    doc = Document(uploaded_file)
-    full_text = "\n".join([para.text for para in doc.paragraphs])
+if not uploaded_file:
+    st.warning("📂 Vui lòng tải lên tài liệu ISO để bắt đầu.")
+else:
+    try:
+        # 🧾 Đọc file .docx
+        doc = Document(uploaded_file)
+        full_text = "\n".join([para.text for para in doc.paragraphs if para.text.strip() != ""])
 
-    # Hiển thị tùy chọn
-    st.subheader("💬 Nhập câu hỏi về tài liệu:")
-    user_input = st.text_area("Câu hỏi", placeholder="Ví dụ: Mẫu phiếu kiểm tra chất lượng ở đâu?")
+        # 📝 Nhập câu hỏi
+        st.subheader("💬 Nhập câu hỏi về tài liệu:")
+        user_input = st.text_area("Câu hỏi", placeholder="Ví dụ: Trách nhiệm kiểm tra chất lượng thuộc về ai?", height=100)
 
-    if st.button("Gửi câu hỏi"):
-        with st.spinner("Đang xử lý..."):
-            prompt = f"""
-Tài liệu ISO sau:\n\n{full_text[:15000]}\n\n
-Người dùng hỏi:\n\"{user_input}\"\n\n
-Hãy trả lời ngắn gọn, rõ ràng, trích đúng nội dung từ tài liệu nếu có.
+        # 🔍 Gửi truy vấn
+        if st.button("Gửi câu hỏi") and user_input.strip():
+            with st.spinner("🔎 Đang truy vấn Gemini..."):
+                prompt = f"""
+Bạn là trợ lý ISO. Hãy dựa vào tài liệu dưới đây để trả lời câu hỏi.
+
+==== TÀI LIỆU ====
+{full_text[:15000]}
+
+==== CÂU HỎI ====
+{user_input}
+
+Trả lời ngắn gọn, dễ hiểu, và chính xác.
 """
-            response = model.generate_content(prompt)
-            st.markdown("### 🧠 Trợ lý trả lời:")
-            st.write(response.text)
+                response = model.generate_content(prompt)
+                st.markdown("### 🧠 Trợ lý trả lời:")
+                st.write(response.text)
+        elif st.button("Gửi câu hỏi") and not user_input.strip():
+            st.warning("❗ Vui lòng nhập câu hỏi trước khi gửi.")
+    except Exception as e:
+        st.error(f"⚠️ Lỗi khi đọc tài liệu: {e}")
