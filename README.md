@@ -1,614 +1,289 @@
-# ChatbotTalopack
-Dùng để hỏi và theo dõi thông tin của công ty
 📁 01-ISO9001-2015 SYSTEM TLP
-│   ├── 01-ISO9001-2015 SYSTEM TLP - new(1).html
-│   ├── 01-ISO9001-2015 SYSTEM TLP - new(2).html
-│   ├── 01-ISO9001-2015 SYSTEM TLP - new.html
 │   📁 01-TAI LIEU ISO 9001-2015
-│   │   ├── .DS_Store
-│   │   📁 00-phan chung-gioi thieu cong ty - ok
-│   │   │   ├── .DS_Store
-│   │   │   ├── TALOPACK PROFILE 2021.pdf
-│   │   │   ├── desktop.ini
-│   │   │   ├── gioi thieu chung he thong chat luong - ATVSTP.docx
-│   │   │   ├── ~$ tay chat luong - ATVSTP.docx
-│   │   📁 01-boi canh va chien luoc
-│   │   │   ├── .DS_Store
-│   │   │   ├── 1-boi canh va chien luoc TALOPACK 2022.doc
-│   │   │   ├── 1-boi canh va chien luoc TALOPACK 2023.doc
-│   │   │   ├── 1-boi canh va chien luoc TALOPACK 2024.doc
-│   │   │   ├── desktop.ini
-│   │   📁 02-chinh sach ok
-│   │   │   ├── 04 chinh-sach-chat-luong-atvstp-2021.docx
-│   │   │   ├── desktop.ini
-│   │   📁 03-muc tieu va ke hoach công ty
-│   │   │   ├── .DS_Store
-│   │   │   📁 01-muc tieu ke hoach
-│   │   │   │   ├── .DS_Store
-│   │   │   │   ├── desktop.ini
-│   │   │   │   📁 nam 2020
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 020720_MT-6 thang cuoi 2020.pdf
-│   │   │   │   │   ├── MUC TIEU NAM 2020 THEO THANG VA SALE.xlsx
-│   │   │   │   │   ├── MỤC TIÊU PHONG KINH DOANH 2020.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   ├── 02-Ke-hoach-hanh-dong-2022.docx
-│   │   │   📁 Ke hoach bao tri bao duong
-│   │   │   │   ├── KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2023.xlsx
-│   │   │   │   ├── KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2024.xlsx
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Muc tieu - Ke hoach HCNS
-│   │   │   │   ├── .DS_Store
-│   │   │   │   ├── 02-MUC TIEU HCNS 2023.docx
-│   │   │   │   📁 NAM 2022
-│   │   │   │   │   ├── 02-MUC TIEU HCNS-2022.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ke hoach thuc hien - HCNS 2022.xlsx
-│   │   │   │   📁 NAM 2023
-│   │   │   │   │   ├── 02-MUC TIEU HCNS 2023.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ke hoach thuc hien muc tieu 2023- HCNS.xlsx
-│   │   │   │   📁 NĂM 2024
-│   │   │   │   │   ├── 02-MUC TIEU HCNS 2024.docx
-│   │   │   │   │   ├── Ke hoach dao tao 2024 (1).doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Muc tieu - Ke hoach KHO
-│   │   │   │   📁 NAM 2023
-│   │   │   │   │   ├── 05-MUC TIEU 2023-kho.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 NAM 2024
-│   │   │   │   │   ├── KE HOACH THỰC HIỆN 2024 -KHO.xlsx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Muc tieu - Ke hoach KID
-│   │   │   │   📁 NAM 2023
-│   │   │   │   │   ├── KE HOACH thuc hien 2023 -KD .xlsx
-│   │   │   │   │   ├── MUC TIEU PHONG KINH DOANH 2023.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 NAM 2024
-│   │   │   │   │   ├── KE HOACH thuc hien 2024.xlsx
-│   │   │   │   │   ├── MUC TIEU PHONG KINH DOANH 2024.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Muc tieu - Ke hoach SX
-│   │   │   │   ├── 02 actionplan muctieu ISO.xlsx
-│   │   │   │   📁 NAM 2021
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── muc tieu sx 2021.docx
-│   │   │   │   📁 NAM 2022
-│   │   │   │   │   ├── 01 Mục tiêu San xuat 2022.docx
-│   │   │   │   │   ├── 02 actionplan muctieu ISO.xlsx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 NAM 2023
-│   │   │   │   │   ├── 01 Mục tiêu San xuat 2023 .docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 NAM 2024
-│   │   │   │   │   ├── ACTION PLAN 2024.xlsx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Muc tieu- Chat luong HCNS
-│   │   │   │   ├── Muc-tieu-chat-luong-HC-NS-2022.docx
-│   │   │   │   ├── Muc-tieu-chat-luong-HC-NS-2023.docx
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Muc-tieu-chat-luong-ATVSTP
-│   │   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2021.doc
-│   │   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2022.doc
-│   │   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2023.doc
-│   │   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2024.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Muc-tieu-chat-luong-MUA HANG
-│   │   │   │   📁 2023
-│   │   │   │   │   ├── 01-Muc-tieu-chat-luong MUA HÀNG 2023  .docx
-│   │   │   │   │   ├── 02 - KE HOACH THUC HIEN MUC TIEU MUA HANG 2023.xlsx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 2024
-│   │   │   │   │   ├── KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024 (1).xlsx
-│   │   │   │   │   ├── KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024.xlsx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 Mục tieu-Ke hoach KYT
-│   │   │   │   ├── 01 Mục tiêu kỹ thuật 2025.docx
-│   │   │   ├── desktop.ini
-│   │   📁 04-to chuc va MTCV-OK
-│   │   │   ├── .DS_Store
-│   │   │   ├── 01-so-do-to-chuc-cong-ty-2021.docx
-│   │   │   ├── Ban ISO TLP.doc
-│   │   │   📁 Mo ta cong viec
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 01-BGD
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 1-MTCV- Giam doc.doc
-│   │   │   │   │   ├── 2-MTCV- Dai dien lanh dao.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 02-phong kinh doanh
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 03-MTCV- Giam doc kinh doanh.doc
-│   │   │   │   │   ├── 06-MTCV- Trương phong kinh doanh.doc
-│   │   │   │   │   ├── 07-MTCV- Nhan vien kinh doanh.doc
-│   │   │   │   │   ├── 08-MTCV- Trợ lý  kinh doanh.doc
-│   │   │   │   │   ├── 09-MTCV- Nhan vien thiet ke.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$MTCV- Giam doc kinh doanh.doc
-│   │   │   │   📁 03-phong HCNS - KE TOAN
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 04-MTCV-Truong phong HCNS ke toan.docx
-│   │   │   │   │   📁 HCNS
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── 10-MTCV- NV hanh chinh nhan su.doc
-│   │   │   │   │   │   ├── 11-MTCV-NV-Tap-vu.docx
-│   │   │   │   │   │   ├── 12-MTCV-NV-Bao-ve.docx
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   📁 ke toan
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── 13-MTCV- Nhan vien ke toan.doc
-│   │   │   │   │   │   ├── 14-MTCV- Nhan vien kho.doc
-│   │   │   │   │   │   ├── 15-MTCV- Nhan vien ho tro kho.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 04-nha may
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 05-MTCV- Giam doc san xuat.doc
-│   │   │   │   │   📁 06-phong ky thuat
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── 21-MTCV- Truong phong ky thuat.doc
-│   │   │   │   │   │   ├── 22-MTCV- Thu ky ky thuat.doc
-│   │   │   │   │   │   ├── 23-MTCV- nhan vien ky thuat.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   📁 Co dien
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── 20-MTCV- NV bao tri.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   📁 KHSX-VT
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── 16-MTCV- Thu ky san xuat.docx
-│   │   │   │   │   │   ├── 19-MTCV- Nhan vien vat tu.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   📁 San xuat
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── 17-MTCV- To truong.doc
-│   │   │   │   │   │   ├── 18-MTCV- Cong nhan.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   ├── QĐ-thanh-lap-5S.docx
-│   │   │   ├── desktop.ini
-│   │   📁 05-xem xet lanh dao OK
-│   │   │   ├── .DS_Store
-│   │   │   📁 BIEU MAU
-│   │   │   │   ├── QT-01-M01 BAO CAO THANG.doc
-│   │   │   │   ├── QT-01-M02- Bang tong hop du lieu.doc
-│   │   │   │   ├── QT-01-M03 - Bien ban hop.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   ├── QT-01-QT XEM XET CUA LANH DAO QL CHÂT LƯỢNG _ ATVSTP.doc
-│   │   │   ├── desktop.ini
-│   │   📁 06-danh gia noi bo OK
-│   │   │   ├── .DS_Store
-│   │   │   📁 BIEU MAU
-│   │   │   │   ├── .DS_Store
-│   │   │   │   ├── QT-02-M01-Ke hoach danh gia noi bo.doc
-│   │   │   │   ├── QT-02-M02 Chuong trinh danh gia noi bo.doc
-│   │   │   │   ├── QT-02-M03-Bien ban hop danh gia noi bo.doc
-│   │   │   │   ├── QT-02-M04bao cao danh gia noi bo.xls
-│   │   │   │   ├── QT-02-M05 bao cao tham dinh.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   ├── QT-02-QT DANH GIA NOI BO.doc
-│   │   │   ├── desktop.ini
-│   │   📁 07-khac phuc cai tien OK
-│   │   │   ├── QT-03 QT KHAC PHUC-PHONG NGUA-CAI TIEN.doc
+│   │   📁 Biểu mẫu
+│   │   │   ├── 01 NHẬT KÝ MÁY INForm mẫu.xlsx.xlsx
+│   │   │   ├── 02 BM Ket qua hieu chuan noi bo.xls
+│   │   │   ├── 02 bao cao san xuat may GHEP.xlsx
+│   │   │   ├── 02-BM-Kiem-tra-VSCN-hang-ngay.doc
+│   │   │   ├── 02-Form thong so may in co them do dao dong gia tri do.docx
+│   │   │   ├── 03-02-Form thong so may ghep-chia-lam tui co them do dao dong gia tri do.docx
+│   │   │   ├── 03-Bao cao san xuat hang ngay TÚI.xlsx
+│   │   │   ├── 04 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx
+│   │   │   ├── 08-thong tin yeu cau thiet ke.docx
+│   │   │   ├── 1.bangdanhgia5S_cac bo phan.xls
+│   │   │   ├── 1.bia.docx
+│   │   │   ├── 2.checklist SSOP be mat tiep xuc - may thoi-ghep-chia-in-tui.xlsx
+│   │   │   ├── BIEU MAU GIAM SAT VE SINH BAO QUAN KHO HOA CHAT.doc
+│   │   │   ├── BM01-DanhMucMay.xlsx
+│   │   │   ├── BM02-DANH MUC _ LICH BD CSHT.xlsx
+│   │   │   ├── BM03- NHAT KY BAO TRI.xls
+│   │   │   ├── BM04-PHIEU YEU CAU-GHI NHAN SUA CHUA.xlsx
+│   │   │   ├── BM05-KIEM TRA MAY HANG NGAY.xlsx
+│   │   │   ├── BM06-KIEM TRA DINH KY MÁY HANG THANG.xlsx
+│   │   │   ├── Báo cáo theo dõi hạn sử dụng.docx
+│   │   │   ├── CHUONG TRINH THAM TRA HSD.xlsx
+│   │   │   ├── Danh gia thoa man khach hang.doc
+│   │   │   ├── F01-BM-Theo-doi-suc-khoe-cn.doc
+│   │   │   ├── M01 Danh muc kiem soat ho so.doc
+│   │   │   ├── M01 Danh muc kiem soat tai lieu.doc
+│   │   │   ├── M01 Ke hoach hieu chuan.xls
+│   │   │   ├── M01 Phieu de nghi tuyen dung.doc
+│   │   │   ├── M01- Ve-sinh-nha-xuong.doc
+│   │   │   ├── M01-DANH SACH KHACH HANG.xls
+│   │   │   ├── M01-Danh sach quan ly truc in.xls
+│   │   │   ├── M01-De nghi mua hang.xlsx
+│   │   │   ├── M01-GIAM SAT CUA KINH.docx
+│   │   │   ├── M01-Ke hoach dao tao.doc
+│   │   │   ├── M01-Ke-hoach-san-xuat.xlsx
+│   │   │   ├── M01-Ket qua thu nghiem mau NVL.doc
+│   │   │   ├── M01-Noi dung-Phieu tham do-010619.doc
+│   │   │   ├── M01-Phieu nhap kho tp.doc
+│   │   │   ├── M01-Phieu nhap vattu.xlsx
+│   │   │   ├── M01-Yeu cau san xuat mau.doc
+│   │   │   ├── M01-ke hoach diet dong vat gay hai.docx
+│   │   │   ├── M01A-B-Bien ban ky duyet mau in+ghep.xls
+│   │   │   ├── M01A-Bien ban ktra in.doc
+│   │   │   ├── M01B-Bien ban ktra ghep.doc
+│   │   │   ├── M01C-Bien ban ktra chia.doc
+│   │   │   ├── M01D-Bien ban ktra lam tui.doc
+│   │   │   ├── M01D-phieu do do nhot.xls
+│   │   │   ├── M02 Phieu de nghi huy ho so.doc
+│   │   │   ├── M02 Phieu kiem soat qua trinh dao tao.doc
+│   │   │   ├── M02 Thong ke phan tich su thoa man cua khach hang.doc
+│   │   │   ├── M02-BAO GIA.docx
+│   │   │   ├── M02-Danh sach va danh gia nha cung cap -NEW.xls
+│   │   │   ├── M02-Ket qua thu nghiem mau bao bi.doc
+│   │   │   ├── M02-Kiem tra den diet con trung.doc
+│   │   │   ├── M02-Lenh san xuat.xlsx
+│   │   │   ├── M02-Phieu de nghi sua truc.doc
+│   │   │   ├── M02-Phieu tra vat tu thua.doc
+│   │   │   ├── M02-Phieu_xuat_kho_ban_hang.xls
+│   │   │   ├── M02-Ve-sinh-loi di nha-xuong.doc
+│   │   │   ├── M02-bang-thu-thap-du-lieu-ung-vien-co-trinh-do-chuyen-mon.doc
+│   │   │   ├── M02-theo dõi dụng cụ cắt gọt-1.xlsx
+│   │   │   ├── M02-theo dõi dụng cụ cắt gọt.xlsx
+│   │   │   ├── M03- DON DAT HANG (new).xlsx
+│   │   │   ├── M03- bang-thu-thap-du-lieu-ung-vien-danh-cho-ldpt.doc
+│   │   │   ├── M03-Bang nhap xuat ton tp.xlsx
+│   │   │   ├── M03-NHẬT KÝ MÁY INForm mẫu (CÓ THEO DÕI MÁY IN).xlsx .xlsx
+│   │   │   ├── M03-PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx
+│   │   │   ├── M03-Phieu de nghi xuat truc-Sua.doc
+│   │   │   ├── M03-Phieu de nghi xuat truc-TRA.doc
+│   │   │   ├── M03-Phieu yeu cau lam truc.docx
+│   │   │   ├── M03-Thong tin sp moi.doc
+│   │   │   ├── M03-giam sat con trung.doc
+│   │   │   ├── M03A-Phieu xuat kho vat tu tra-sua.doc
+│   │   │   ├── M04-Bang nhap xuat ton.xlsx
+│   │   │   ├── M04-Bao cao theo doi bay chuot.docx
+│   │   │   ├── M04-DON DAT HANG (KH).docx
+│   │   │   ├── M04-KE HOACH DANH GIA NHA CUNG CAP.doc
+│   │   │   ├── M04-Phieu kiem soat qua trinh tuyen dung co trinh do chuyen mon.docx
+│   │   │   ├── M04-bao cao san xuat may GHEP.xlsx
+│   │   │   ├── M04-danh sach SP mau.xls
+│   │   │   ├── M04-danh sach truc in sua - lam moi.xlsx
+│   │   │   ├── M05 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx
+│   │   │   ├── M05-HOP DONG MAU MUA BAN TANG LONG PACK-01.docx
+│   │   │   ├── M05-Phieu kiem soat qua trinh tuyen dung_LDPT.doc
+│   │   │   ├── M06-Bao cao san xuat hang ngay TÚI.xlsx
+│   │   │   ├── M06-MAU HOP DONG NGUYEN TAC TANG LONG PACK-01.docx
+│   │   │   ├── M07-08-09-Tem thung - cuon TP.xlsx
+│   │   │   ├── M10-11-12-13-14TEM IN - GHEP.xlsx
+│   │   │   ├── M15-Tong hop hang gia cong.xlsx
+│   │   │   ├── MAU GAY FILE HO SO.docx
+│   │   │   ├── MAY LANH NUOC-QUAT HOI NUOC - đa sua.xlsx
+│   │   │   ├── NHM-QT-04-M01-BB kiem tra vat tu.xls
+│   │   │   ├── NHM-QT-04-M02-Bien ban de nghi tra hang.doc
+│   │   │   ├── PHIẾU NHẬP KHO THÀNH PHẨM EXCEL.xlsx
+│   │   │   ├── PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx
+│   │   │   ├── QT-01-M01 BAO CAO THANG.doc
+│   │   │   ├── QT-01-M02- Bang tong hop du lieu.doc
+│   │   │   ├── QT-01-M03 - Bien ban hop.doc
+│   │   │   ├── QT-02-M01-Ke hoach danh gia noi bo.doc
+│   │   │   ├── QT-02-M02 Chuong trinh danh gia noi bo.doc
+│   │   │   ├── QT-02-M03-Bien ban hop danh gia noi bo.doc
+│   │   │   ├── QT-02-M04bao cao danh gia noi bo.xls
+│   │   │   ├── QT-02-M05 bao cao tham dinh.doc
 │   │   │   ├── QT-03-M01 Bao cao hoat dong KP - PN - CT.doc
-│   │   │   ├── desktop.ini
-│   │   📁 08-quan ly rui ro-tri thuc OK
-│   │   │   ├── .DS_Store
 │   │   │   ├── QT-04-BM- Bang danh gia rui ro, ke hoach quan ly rui ro.xls
-│   │   │   ├── QT-04-qui trinh quan ly tri thuc.doc
-│   │   │   ├── desktop.ini
-│   │   📁 09-quan ly su KPH OK
-│   │   │   ├── .DS_Store
 │   │   │   ├── QT-05-BM01-Phieu bao su co.doc
-│   │   │   ├── QT-05-quy trinh kiem soat san pham khong phu hop.doc
-│   │   │   ├── desktop.ini
-│   │   📁 10-QT GIAI QUYET KHIEU NAI - OK
-│   │   │   ├── .DS_Store
 │   │   │   ├── QT-06-BM01-Phieu tiep nhan va giai quyet khieu nai moi.doc
-│   │   │   ├── QT-06-Quy trinh giai quyet khieu nai.doc
-│   │   │   ├── desktop.ini
-│   │   📁 11-PHONG KINH DOANH
-│   │   │   ├── .DS_Store
-│   │   │   📁 01-QT BAN HANG
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 BM moi
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 07-BANG TIEU CHI DANH GIA KHACH HANG P.KD.docx
-│   │   │   │   │   ├── 08-thong tin yeu cau thiet ke.docx
-│   │   │   │   │   ├── M01-DANH SACH KHACH HANG.xls
-│   │   │   │   │   ├── M02-BAO GIA.docx
-│   │   │   │   │   ├── M03-Phieu yeu cau lam truc.docx
-│   │   │   │   │   ├── M04-DON DAT HANG (KH).docx
-│   │   │   │   │   ├── M05-HOP DONG MAU MUA BAN TANG LONG PACK-01.docx
-│   │   │   │   │   ├── M06-MAU HOP DONG NGUYEN TAC TANG LONG PACK-01.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── QUY TRINH BAN HANG.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   │   📁 maketing
-│   │   │   │   │   ├── 01 Phan tich thi truong va nguoi tieu dung.doc
-│   │   │   │   │   ├── 02 Phan tich thi truong B2B.doc
-│   │   │   │   │   ├── 03 Nghien cuu va lua chon thi truong muc tieu.doc
-│   │   │   │   │   ├── 03 Phan tich nganh va doi thu canh tranh.doc
-│   │   │   │   │   ├── 04 Dinh vi san pham.doc
-│   │   │   │   │   ├── 05 Thiet ke chien luoc Marketing.doc
-│   │   │   │   │   ├── 06  Kiem tra cac hoat dong Marketing.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   📁 02-QT DG THOA MAN CUA KH - ok
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 Bieu mau
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-Noi dung-Phieu tham do-010619.doc
-│   │   │   │   │   ├── M02 Thong ke phan tich su thoa man cua khach hang.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── Danh gia thoa man khach hang.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 03-QUY TRINH THU HOI SAN PHAM - ok
-│   │   │   │   ├── .DS_Store
-│   │   │   │   ├── 03-Quy trinh thu hoi san pham.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 04-HUONG DAN CONG VIEC
-│   │   │   │   ├── .DS_Store
-│   │   │   │   ├── 01-HUONG DAN  LAM TRUC IN.doc
-│   │   │   │   ├── 02-HUONG DAN LEN DON HANG - HOP DONG.doc
-│   │   │   │   ├── 03-HUONG DAN TINH GIA- BAO GIA.doc
-│   │   │   │   ├── 04-HUONG DAN THEO DOI QT THIET KE-DUYET MAQUETTE P.KD.doc
-│   │   │   │   ├── 05-CHINH SACH CHAM SOC KHACH HANG.docx
-│   │   │   │   ├── desktop.ini
-│   │   │   ├── desktop.ini
-│   │   📁 12-HCNS - KHO
-│   │   │   ├── .DS_Store
-│   │   │   📁 12-01-HCNS
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 01-Qui-trinh-kiem-soat-tai-lieu - ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   📁 Bieu mau
-│   │   │   │   │   │   ├── M01 Danh muc kiem soat tai lieu.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── Quy trinh kiem soat tai lieu.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$y trinh kiem soat tai lieu.doc
-│   │   │   │   📁 02-Qui-trinh-kiem-soat-ho-so - ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   📁 Bieu mau
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── M01 Danh muc kiem soat ho so.doc
-│   │   │   │   │   │   ├── M02 Phieu de nghi huy ho so.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── MAU GAY FILE HO SO.docx
-│   │   │   │   │   ├── Quy trinh kiem soat ho so.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$U GAY FILE HO SO.docx
-│   │   │   │   │   ├── ~$y trinh kiem soat ho so.doc
-│   │   │   │   📁 03-QT-Tuyen-dung - OK
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01 Phieu de nghi tuyen dung.doc
-│   │   │   │   │   ├── M02-bang-thu-thap-du-lieu-ung-vien-co-trinh-do-chuyen-mon.doc
-│   │   │   │   │   ├── M03- bang-thu-thap-du-lieu-ung-vien-danh-cho-ldpt.doc
-│   │   │   │   │   ├── M04-Phieu kiem soat qua trinh tuyen dung co trinh do chuyen mon.docx
-│   │   │   │   │   ├── M05-Phieu kiem soat qua trinh tuyen dung_LDPT.doc
-│   │   │   │   │   ├── Qui trinh Tuyen dung.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 04-QT-Dao-tao - OK
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   📁 Bieu mau
-│   │   │   │   │   │   ├── M01-Ke hoach dao tao.doc
-│   │   │   │   │   │   ├── M02 Phieu kiem soat qua trinh dao tao.doc
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── Quy trinh dao tao.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 12-02-KHO
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 01-QT xuat nhap NVL
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-Phieu nhap vattu.xlsx
-│   │   │   │   │   ├── M02-Phieu tra vat tu thua.doc
-│   │   │   │   │   ├── M03-PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx
-│   │   │   │   │   ├── M03A-Phieu xuat kho vat tu tra-sua.doc
-│   │   │   │   │   ├── M04-Bang nhap xuat ton.xlsx
-│   │   │   │   │   ├── Quy trinh xuat nhap nguyen vat lieu.doc-02.05.2022.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 01-QT xuat nhap TP
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-Phieu nhap kho tp.doc
-│   │   │   │   │   ├── M02-Phieu_xuat_kho_ban_hang.xls
-│   │   │   │   │   ├── M03-Bang nhap xuat ton tp.xlsx
-│   │   │   │   │   ├── Quy trinh xuat nhap thanh pham.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 03-Cac huong dan - OK
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 01-huong dan bao quan mang.doc
-│   │   │   │   │   ├── 02-bao quan hoa chat.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   ├── desktop.ini
-│   │   📁 13-NHA MAY
-│   │   │   ├── .DS_Store
-│   │   │   📁 01-SAN XUAT
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 01-QT SAN XUAT
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   📁 BM san xuat
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── M01-Ke-hoach-san-xuat.xlsx
-│   │   │   │   │   │   ├── M02-Lenh san xuat.xlsx
-│   │   │   │   │   │   ├── M03-NHẬT KÝ MÁY INForm mẫu (CÓ THEO DÕI MÁY IN).xlsx .xlsx
-│   │   │   │   │   │   ├── M04-bao cao san xuat may GHEP.xlsx
-│   │   │   │   │   │   ├── M05 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx
-│   │   │   │   │   │   ├── M06-Bao cao san xuat hang ngay TÚI.xlsx
-│   │   │   │   │   │   ├── M07-08-09-Tem thung - cuon TP.xlsx
-│   │   │   │   │   │   ├── M10-11-12-13-14TEM IN - GHEP.xlsx
-│   │   │   │   │   │   ├── M15-Tong hop hang gia cong.xlsx
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   📁 Form SX chua sua
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── 01 NHẬT KÝ MÁY INForm mẫu.xlsx.xlsx
-│   │   │   │   │   │   ├── 02 bao cao san xuat may GHEP.xlsx
-│   │   │   │   │   │   ├── 03-Bao cao san xuat hang ngay TÚI.xlsx
-│   │   │   │   │   │   ├── 04 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx
-│   │   │   │   │   │   ├── M02-theo dõi dụng cụ cắt gọt.xlsx
-│   │   │   │   │   │   ├── PHIẾU NHẬP KHO THÀNH PHẨM EXCEL.xlsx
-│   │   │   │   │   │   ├── PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx
-│   │   │   │   │   │   ├── TEM CHIA-LỚN.xlsx
-│   │   │   │   │   │   ├── TEM CHIA-NHỎ).xlsx
-│   │   │   │   │   │   ├── TEM IN - GHEP.xlsx
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   │   ├── ~$01 NHẬT KÝ MÁY INForm mẫu.xlsx.xlsx
-│   │   │   │   │   │   ├── ~$02 bao cao san xuat may GHEP.xlsx
-│   │   │   │   │   ├── QT SAN XUAT.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$0816 QT SAN XUAT.docx
-│   │   │   │   📁 02-CAC HUONG DAN
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 03-HD NHAN BIET VA TRUY TIM NGUON GOC.doc
-│   │   │   │   │   ├── 04-Huong dan van hanh may IN.doc
-│   │   │   │   │   ├── 05-Huong dan van hanh may Ghep.doc
-│   │   │   │   │   ├── 06-Huong dan van hanh may Tui.doc
-│   │   │   │   │   ├── 07-Huong dan van hanh may Tensile.doc
-│   │   │   │   │   ├── 08-Huong dan van hanh may Dan.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$-Huong dan van hanh may IN.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   ├── 02 actionplan muctieu ISO.xlsx
-│   │   │   📁 02-CO DIEN
-│   │   │   │   ├── .DS_Store
-│   │   │   │   ├── 1 - Quy trinh bao tri sua chua thiet bi - Ha tang cơ sơ - 220623.doc
-│   │   │   │   ├── BM01-DanhMucMay.xlsx
-│   │   │   │   ├── BM02-DANH MUC _ LICH BD CSHT.xlsx
-│   │   │   │   ├── BM03- NHAT KY BAO TRI.xls
-│   │   │   │   ├── BM04-PHIEU YEU CAU-GHI NHAN SUA CHUA.xlsx
-│   │   │   │   ├── BM05-KIEM TRA MAY HANG NGAY.xlsx
-│   │   │   │   ├── BM06-KIEM TRA DINH KY MÁY HANG THANG.xlsx
-│   │   │   │   ├── MAY LANH NUOC-QUAT HOI NUOC - đa sua.xlsx
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 03-KHSX-VT - ok
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 01-QT Mua hang
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-De nghi mua hang.xlsx
-│   │   │   │   │   ├── M02-Danh sach va danh gia nha cung cap -NEW.xls
-│   │   │   │   │   ├── M03- DON DAT HANG (new).xlsx
-│   │   │   │   │   ├── M04-KE HOACH DANH GIA NHA CUNG CAP.doc
-│   │   │   │   │   ├── QT MUA HANG.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 02-HD Cong viec
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 07-Huong dan Lap ke hoach vat tu.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
+│   │   │   ├── TEM CHIA-LỚN.xlsx
+│   │   │   ├── TEM CHIA-NHỎ).xlsx
+│   │   │   ├── TEM IN - GHEP.xlsx
+│   │   │   ├── TTT-QA-12 QUAN LY THUY TINH - VAT LA.doc
+│   │   📁 Hướng dẫn
+│   │   │   ├── 01-HUONG DAN  LAM TRUC IN.doc
+│   │   │   ├── 01-huong dan bao quan mang.doc
+│   │   │   ├── 02-HUONG DAN LEN DON HANG - HOP DONG.doc
+│   │   │   ├── 02-bao quan hoa chat.doc
+│   │   │   ├── 03-HD NHAN BIET VA TRUY TIM NGUON GOC.doc
+│   │   │   ├── 03-HUONG DAN TINH GIA- BAO GIA.doc
+│   │   │   ├── 03-MTCV- Giam doc kinh doanh.doc
 │   │   │   ├── 03-danh muc rui ro san xuat.xlsx
-│   │   │   📁 04-KY THUAT
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 01-QT KIEM TRA NVL OK
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── NHM-QT-04-M01-BB kiem tra vat tu.xls
-│   │   │   │   │   ├── NHM-QT-04-M02-Bien ban de nghi tra hang.doc
-│   │   │   │   │   ├── NHM-QT-04-Quy trinh kiem tra nguyen vat lieu.doc
-│   │   │   │   │   ├── NHM-QT-04-Tieu chuan NVL.xls
-│   │   │   │   │   ├── NHM-QT-04-Tieu chuan ky thuat mang LLDPE.xls
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 02-QT KIEM TRA BTP-TP-ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   📁 Bieu mau
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   📁 M01- kiem tra qua trinh
-│   │   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   │   ├── M01A-B-Bien ban ky duyet mau in+ghep.xls
-│   │   │   │   │   │   │   ├── M01A-Bien ban ktra in.doc
-│   │   │   │   │   │   │   ├── M01B-Bien ban ktra ghep.doc
-│   │   │   │   │   │   │   ├── M01C-Bien ban ktra chia.doc
-│   │   │   │   │   │   │   ├── M01D-Bien ban ktra lam tui.doc
-│   │   │   │   │   │   │   ├── M01D-phieu do do nhot.xls
-│   │   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   │   📁 M02-Ly lich SP
-│   │   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   │   ├── 02-Form thong so may in co them do dao dong gia tri do.docx
-│   │   │   │   │   │   │   ├── 03-02-Form thong so may ghep-chia-lam tui co them do dao dong gia tri do.docx
-│   │   │   │   │   │   │   ├── 1.bia.docx
-│   │   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── NHM-QT-05-Quy trinh kiem tra ban thanh pham, thanh pham.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 03-QT HIEU CHUAN THIET BI DO-ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 02 BM Ket qua hieu chuan noi bo.xls
-│   │   │   │   │   ├── M01 Ke hoach hieu chuan.xls
-│   │   │   │   │   ├── Quy trinh hieu chuan thiet bi do-02-01-19.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 04-QT TRIEN KHAI SP MOI - ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   📁 Bieu mau
-│   │   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   │   ├── M01-Yeu cau san xuat mau.doc
-│   │   │   │   │   │   ├── M02-Ket qua thu nghiem mau bao bi.doc
-│   │   │   │   │   │   ├── M03-Thong tin sp moi.doc
-│   │   │   │   │   │   ├── M04-danh sach SP mau.xls
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── quy trinh trien khai sp moi.doc
-│   │   │   │   📁 05-QT THU NGHIEM NVL MOI-ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-Ket qua thu nghiem mau NVL.doc
-│   │   │   │   │   ├── QT THU NGHIEM NVL MOI.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 06-QT QUAN LY TRUC IN
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-Danh sach quan ly truc in.xls
-│   │   │   │   │   ├── M02-Phieu de nghi sua truc.doc
-│   │   │   │   │   ├── M03-Phieu de nghi xuat truc-Sua.doc
-│   │   │   │   │   ├── M03-Phieu de nghi xuat truc-TRA.doc
-│   │   │   │   │   ├── M04-danh sach truc in sua - lam moi.xlsx
-│   │   │   │   │   ├── QT QUAN LY TRUC IN.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 07-Cac huong dan
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   📁 08-HUONG DAN -HAN SU DUNG
-│   │   │   │   │   │   ├── Báo cáo theo dõi hạn sử dụng.docx
-│   │   │   │   │   │   ├── CHUONG TRINH THAM TRA HSD.xlsx
-│   │   │   │   │   │   ├── Huong dantheo doi han su dung.docx
-│   │   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── QUD01-Quy chuan chieu dai truc in.docx
-│   │   │   │   │   ├── QUD02-quy dinh kiem tra keo- corona mang ghep.doc
-│   │   │   │   │   ├── QUD03-quy dinh ghep.doc
-│   │   │   │   │   ├── QUD04-QD kiem tra chat luong ( cập nhật ).doc
-│   │   │   │   │   ├── QUD04-QD kiem tra chat luong.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$02-quy dinh kiem tra keo- corona mang ghep.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   ├── desktop.ini
-│   │   📁 14-AN TOAN THUC PHAM
-│   │   │   ├── .DS_Store
-│   │   │   📁 1-SO DO MAT BANG
-│   │   │   │   ├── .DS_Store
-│   │   │   │   ├── BAN VE ISO NHA XUONG.pdf
-│   │   │   │   ├── BanVeMatBang-TaLo-220706.pdf
-│   │   │   │   ├── SO DO VI TRI DEN CHIEU SANG.pdf
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 2-MO TA SAN PHAM - GMP
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 Nam-2022
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 01-MTSP PET-MPET-PE.docx
-│   │   │   │   │   ├── 02-MTSP PET-Al-PE.docx
-│   │   │   │   │   ├── 03-MTSP OPP-PE.docx
-│   │   │   │   │   ├── 04-MTSP OPP-MCPP.docx
-│   │   │   │   │   ├── 05-MTSP OPP-CPP.docx
-│   │   │   │   │   ├── 06-MTSP PA-PE.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$gggg.doc
-│   │   │   │   📁 Nam-2023
-│   │   │   │   │   ├── 01-MTSP PET-MPET-PE.docx
-│   │   │   │   │   ├── 02-MTSP PET-Al-PE.docx
-│   │   │   │   │   ├── 03-MTSP OPP-PE.docx
-│   │   │   │   │   ├── 04-MTSP OPP-MCPP.docx
-│   │   │   │   │   ├── 05-MTSP OPP-CPP.docx
-│   │   │   │   │   ├── 06-MTSP PA-PE.docx
-│   │   │   │   │   ├── 07-MTSP OPP-MPET-PE.docx
-│   │   │   │   │   ├── 08-MTSP OPP-AL-PE.docx
-│   │   │   │   │   ├── 09-MTSP PET-PE.docx
-│   │   │   │   │   ├── 10-MTSP PET-PA-PE.docx
-│   │   │   │   │   ├── 11-MTSP PET-CPP.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 Nam-2024
-│   │   │   │   │   ├── 01-MTSP PET-MPET-PE.docx
-│   │   │   │   │   ├── 02-MTSP PET-Al-PE.docx
-│   │   │   │   │   ├── 03-MTSP OPP-PE.docx
-│   │   │   │   │   ├── 04-MTSP OPP-MCPP.docx
-│   │   │   │   │   ├── 05-MTSP OPP-CPP.docx
-│   │   │   │   │   ├── 06-MTSP PA-PE.docx
-│   │   │   │   │   ├── 07-MTSP OPP-MPET-PE.docx
-│   │   │   │   │   ├── 08-MTSP OPP-AL-PE.docx
-│   │   │   │   │   ├── 09-MTSP PET-PE.docx
-│   │   │   │   │   ├── 10-MTSP PET-PA-PE.docx
-│   │   │   │   │   ├── 11-MTSP PET-CPP.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   📁 3-SSOP
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 SSOP-01-An-toan-nguon-nuoc ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── SSOP 01 - AN TOAN NGUON NUOC.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-02-be mat tiep xuc san pham-ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 1.bangdanhgia5S_cac bo phan.xls
-│   │   │   │   │   ├── 2.checklist SSOP be mat tiep xuc - may thoi-ghep-chia-in-tui.xlsx
-│   │   │   │   │   ├── SSOP 02 - AN TOAN CAC BE MAT TIEP XUC SAN PHAM1.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-03-ngan ngua nhiem cheo ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── SSOP 03 NGAN NGUA SU NHIEM CHEO NEW.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-04-Ve-sinh-ca-nhan ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── 02-BM-Kiem-tra-VSCN-hang-ngay.doc
-│   │   │   │   │   ├── SSOP-04-Ve-sinh-ca-nhan.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-05-phong tranh tac nhan lay nhiem
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01- Ve-sinh-nha-xuong.doc
-│   │   │   │   │   ├── M02-Ve-sinh-loi di nha-xuong.doc
-│   │   │   │   │   ├── SSOP 05 - BAO VE SAN PHAM TRANH CAC TAC NHAN LAY NHIEM.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-06-quan ly hoa chat ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── BIEU MAU GIAM SAT VE SINH BAO QUAN KHO HOA CHAT.doc
-│   │   │   │   │   ├── SSOP 06 QUAN LY HOA CHAT.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-07-Suc-khoe-cong-nhan ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── F01-BM-Theo-doi-suc-khoe-cn.doc
-│   │   │   │   │   ├── SSOP-07-Kiem-tra-suc-khoe-nhan-vien.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-08-Dong-vat-gay-hai ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-ke hoach diet dong vat gay hai.docx
-│   │   │   │   │   ├── M02-Kiem tra den diet con trung.doc
-│   │   │   │   │   ├── M03-giam sat con trung.doc
-│   │   │   │   │   ├── M04-Bao cao theo doi bay chuot.docx
-│   │   │   │   │   ├── SSOP-08-Kiem-soat-con-trung-dong-vat-gay-hai.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ~$ hoach diet dong vat gay hai.docx
-│   │   │   │   📁 SSOP-09-Quan-ly-chat-thai 0k
-│   │   │   │   │   ├── SSOP-09-Kiem-soat-rac-thac-ve-sinh.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-10 - thuy tinh vat la OK
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── M01-GIAM SAT CUA KINH.docx
-│   │   │   │   │   ├── M02-theo dõi dụng cụ cắt gọt.xlsx
-│   │   │   │   │   ├── TTT-QA-12 QUAN LY THUY TINH - VAT LA.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-11-Qui-dinh-giat-ui ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── SSOP-11-Qui dinh giat ui.docx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   📁 SSOP-12-Tinh-huong-khan-cap ok
-│   │   │   │   │   ├── .DS_Store
-│   │   │   │   │   ├── SSOP 12 - Tinh huong khan cap.doc
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   ├── desktop.ini
-│   │   │   │   ├── ~$1- Ve-sinh-nha-xuong.doc
-│   │   │   📁 4-HACCP
-│   │   │   │   ├── .DS_Store
-│   │   │   │   📁 2022
-│   │   │   │   │   ├── Bang phan tich moi nguy 2022.xlsx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ke hoach HACCP 2022.xls
-│   │   │   │   📁 2023
-│   │   │   │   │   ├── Bang phan tich moi nguy 2023.xlsx
-│   │   │   │   │   ├── desktop.ini
-│   │   │   │   │   ├── ke hoach HACCP-2023.xls
-│   │   │   │   ├── Quy trinh phân tich moi nguy.doc
-│   │   │   │   ├── desktop.ini
-│   │   │   │   ├── ~$T-QTR-04(0-qui trinh HACCP) 01-08-20.doc
-│   │   │   ├── desktop.ini
-│   │   ├── SO TAY CHAT LUONG - ATTP - TLP.ppt
+│   │   │   ├── 04-HUONG DAN THEO DOI QT THIET KE-DUYET MAQUETTE P.KD.doc
+│   │   │   ├── 04-Huong dan van hanh may IN.doc
+│   │   │   ├── 04-MTCV-Truong phong HCNS ke toan.docx
+│   │   │   ├── 05-Huong dan van hanh may Ghep.doc
+│   │   │   ├── 05-MTCV- Giam doc san xuat.doc
+│   │   │   ├── 06-Huong dan van hanh may Tui.doc
+│   │   │   ├── 06-MTCV- Trương phong kinh doanh.doc
+│   │   │   ├── 07-Huong dan Lap ke hoach vat tu.doc
+│   │   │   ├── 07-Huong dan van hanh may Tensile.doc
+│   │   │   ├── 07-MTCV- Nhan vien kinh doanh.doc
+│   │   │   ├── 08-Huong dan van hanh may Dan.doc
+│   │   │   ├── 08-MTCV- Trợ lý  kinh doanh.doc
+│   │   │   ├── 09-MTCV- Nhan vien thiet ke.doc
+│   │   │   ├── 1-MTCV- Giam doc.doc
+│   │   │   ├── 10-MTCV- NV hanh chinh nhan su.doc
+│   │   │   ├── 12-MTCV-NV-Bao-ve.docx
+│   │   │   ├── 13-MTCV- Nhan vien ke toan.doc
+│   │   │   ├── 14-MTCV- Nhan vien kho.doc
+│   │   │   ├── 15-MTCV- Nhan vien ho tro kho.doc
+│   │   │   ├── 16-MTCV- Thu ky san xuat.docx
+│   │   │   ├── 17-MTCV- To truong.doc
+│   │   │   ├── 18-MTCV- Cong nhan.doc
+│   │   │   ├── 19-MTCV- Nhan vien vat tu.doc
+│   │   │   ├── 2-MTCV- Dai dien lanh dao.doc
+│   │   │   ├── 20-MTCV- NV bao tri.doc
+│   │   │   ├── 21-MTCV- Truong phong ky thuat.doc
+│   │   │   ├── 22-MTCV- Thu ky ky thuat.doc
+│   │   │   ├── 23-MTCV- nhan vien ky thuat.doc
+│   │   │   ├── Huong dantheo doi han su dung.docx
+│   │   📁 Kế hoạch
+│   │   │   ├── 02 - KE HOACH THUC HIEN MUC TIEU MUA HANG 2023.xlsx
+│   │   │   ├── 02 actionplan muctieu ISO-1.xlsx
+│   │   │   ├── 02 actionplan muctieu ISO-2.xlsx
+│   │   │   ├── 02 actionplan muctieu ISO.xlsx
+│   │   │   ├── 02-Ke-hoach-hanh-dong-2022.docx
+│   │   │   ├── ACTION PLAN 2024.xlsx
+│   │   │   ├── KE HOACH THỰC HIỆN 2024 -KHO.xlsx
+│   │   │   ├── KE HOACH thuc hien 2023 -KD .xlsx
+│   │   │   ├── KE HOACH thuc hien 2024.xlsx
+│   │   │   ├── KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2023.xlsx
+│   │   │   ├── KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2024.xlsx
+│   │   │   ├── KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024 (1).xlsx
+│   │   │   ├── KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024.xlsx
+│   │   │   ├── Ke hoach dao tao 2024 (1).doc
+│   │   │   ├── ke hoach HACCP 2022.xls
+│   │   │   ├── ke hoach HACCP-2023.xls
+│   │   │   ├── ke hoach thuc hien - HCNS 2022.xlsx
+│   │   │   ├── ke hoach thuc hien muc tieu 2023- HCNS.xlsx
+│   │   📁 Mục tiêu
+│   │   │   ├── 01 Mục tiêu San xuat 2022.docx
+│   │   │   ├── 01 Mục tiêu San xuat 2023 .docx
+│   │   │   ├── 01 Mục tiêu kỹ thuật 2025.docx
+│   │   │   ├── 01-Muc-tieu-chat-luong MUA HÀNG 2023  .docx
+│   │   │   ├── 02-MUC TIEU HCNS 2023-1.docx
+│   │   │   ├── 02-MUC TIEU HCNS 2023.docx
+│   │   │   ├── 02-MUC TIEU HCNS 2024.docx
+│   │   │   ├── 02-MUC TIEU HCNS-2022.docx
+│   │   │   ├── 03 Nghien cuu va lua chon thi truong muc tieu.doc
+│   │   │   ├── 05-MUC TIEU 2023-kho.doc
+│   │   │   ├── MUC TIEU NAM 2020 THEO THANG VA SALE.xlsx
+│   │   │   ├── MUC TIEU PHONG KINH DOANH 2023.docx
+│   │   │   ├── MUC TIEU PHONG KINH DOANH 2024.docx
+│   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2021.doc
+│   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2022.doc
+│   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2023.doc
+│   │   │   ├── Muc tieu chat luong - ATVSTP cong ty 2024.doc
+│   │   │   ├── Muc-tieu-chat-luong-HC-NS-2022.docx
+│   │   │   ├── Muc-tieu-chat-luong-HC-NS-2023.docx
+│   │   │   ├── MỤC TIÊU PHONG KINH DOANH 2020.docx
+│   │   │   ├── muc tieu sx 2021.docx
+│   │   📁 Quy trình
+│   │   │   ├── 03-Quy trinh thu hoi san pham.doc
+│   │   │   ├── 1 - Quy trinh bao tri sua chua thiet bi - Ha tang cơ sơ - 220623.doc
+│   │   │   ├── NHM-QT-04-Quy trinh kiem tra nguyen vat lieu.doc
+│   │   │   ├── NHM-QT-04-Tieu chuan NVL.xls
+│   │   │   ├── NHM-QT-04-Tieu chuan ky thuat mang LLDPE.xls
+│   │   │   ├── NHM-QT-05-Quy trinh kiem tra ban thanh pham, thanh pham.doc
+│   │   │   ├── QT MUA HANG.doc
+│   │   │   ├── QT QUAN LY TRUC IN.doc
+│   │   │   ├── QT SAN XUAT.docx
+│   │   │   ├── QT THU NGHIEM NVL MOI.doc
+│   │   │   ├── QT-01-QT XEM XET CUA LANH DAO QL CHÂT LƯỢNG _ ATVSTP.doc
+│   │   │   ├── QT-02-QT DANH GIA NOI BO.doc
+│   │   │   ├── QT-03 QT KHAC PHUC-PHONG NGUA-CAI TIEN.doc
+│   │   │   ├── QT-04-qui trinh quan ly tri thuc.doc
+│   │   │   ├── QT-05-quy trinh kiem soat san pham khong phu hop.doc
+│   │   │   ├── QT-06-Quy trinh giai quyet khieu nai.doc
+│   │   │   ├── QUY TRINH BAN HANG.doc
+│   │   │   ├── Qui trinh Tuyen dung.doc
+│   │   │   ├── Quy trinh dao tao.doc
+│   │   │   ├── Quy trinh hieu chuan thiet bi do-02-01-19.doc
+│   │   │   ├── Quy trinh kiem soat ho so.doc
+│   │   │   ├── Quy trinh kiem soat tai lieu.doc
+│   │   │   ├── Quy trinh phân tich moi nguy.doc
+│   │   │   ├── Quy trinh xuat nhap nguyen vat lieu.doc-02.05.2022.doc
+│   │   │   ├── Quy trinh xuat nhap thanh pham.doc
+│   │   │   ├── quy trinh trien khai sp moi.doc
+│   │   📁 Tài liệu công ty
+│   │   │   📁 Hồ sơ công ty
+│   │   │   │   ├── 01 Phan tich thi truong va nguoi tieu dung.doc
+│   │   │   │   ├── 01-so-do-to-chuc-cong-ty-2021.docx
+│   │   │   │   ├── 02 Phan tich thi truong B2B.doc
+│   │   │   │   ├── 03 Phan tich nganh va doi thu canh tranh.doc
+│   │   │   │   ├── 05 Thiet ke chien luoc Marketing.doc
+│   │   │   │   ├── 05-CHINH SACH CHAM SOC KHACH HANG.docx
+│   │   │   │   ├── 06  Kiem tra cac hoat dong Marketing.doc
+│   │   │   │   ├── 07-BANG TIEU CHI DANH GIA KHACH HANG P.KD.docx
+│   │   │   │   ├── 1-boi canh va chien luoc TALOPACK 2022.doc
+│   │   │   │   ├── 1-boi canh va chien luoc TALOPACK 2023.doc
+│   │   │   │   ├── 1-boi canh va chien luoc TALOPACK 2024.doc
+│   │   │   │   ├── Ban ISO TLP.doc
+│   │   │   │   ├── Bang phan tich moi nguy 2022.xlsx
+│   │   │   │   ├── Bang phan tich moi nguy 2023.xlsx
+│   │   │   │   ├── QĐ-thanh-lap-5S.docx
+│   │   │   │   ├── gioi thieu chung he thong chat luong - ATVSTP.docx
+│   │   │   📁 Quy định
+│   │   │   │   ├── QUD01-Quy chuan chieu dai truc in.docx
+│   │   │   │   ├── QUD02-quy dinh kiem tra keo- corona mang ghep.doc
+│   │   │   │   ├── QUD03-quy dinh ghep.doc
+│   │   │   │   ├── QUD04-QD kiem tra chat luong ( cập nhật ).doc
+│   │   │   │   ├── QUD04-QD kiem tra chat luong.doc
+│   │   │   📁 SSOP
+│   │   │   │   ├── SSOP 01 - AN TOAN NGUON NUOC.doc
+│   │   │   │   ├── SSOP 02 - AN TOAN CAC BE MAT TIEP XUC SAN PHAM1.doc
+│   │   │   │   ├── SSOP 03 NGAN NGUA SU NHIEM CHEO NEW.doc
+│   │   │   │   ├── SSOP 05 - BAO VE SAN PHAM TRANH CAC TAC NHAN LAY NHIEM.doc
+│   │   │   │   ├── SSOP 06 QUAN LY HOA CHAT.doc
+│   │   │   │   ├── SSOP 12 - Tinh huong khan cap.doc
+│   │   │   │   ├── SSOP-04-Ve-sinh-ca-nhan.doc
+│   │   │   │   ├── SSOP-07-Kiem-tra-suc-khoe-nhan-vien.doc
+│   │   │   │   ├── SSOP-08-Kiem-soat-con-trung-dong-vat-gay-hai.doc
+│   │   │   │   ├── SSOP-09-Kiem-soat-rac-thac-ve-sinh.doc
+│   │   │   │   ├── SSOP-11-Qui dinh giat ui.docx
+│   │   📁 Tài liệu sản phẩm
+│   │   │   ├── 01-MTSP PET-MPET-PE-1.docx
+│   │   │   ├── 01-MTSP PET-MPET-PE-2.docx
+│   │   │   ├── 01-MTSP PET-MPET-PE.docx
+│   │   │   ├── 02-MTSP PET-Al-PE-1.docx
+│   │   │   ├── 02-MTSP PET-Al-PE-2.docx
+│   │   │   ├── 02-MTSP PET-Al-PE.docx
+│   │   │   ├── 03-MTSP OPP-PE-1.docx
+│   │   │   ├── 03-MTSP OPP-PE-2.docx
+│   │   │   ├── 03-MTSP OPP-PE.docx
+│   │   │   ├── 04 Dinh vi san pham.doc
+│   │   │   ├── 04-MTSP OPP-MCPP-1.docx
+│   │   │   ├── 04-MTSP OPP-MCPP-2.docx
+│   │   │   ├── 04-MTSP OPP-MCPP.docx
+│   │   │   ├── 05-MTSP OPP-CPP-1.docx
+│   │   │   ├── 05-MTSP OPP-CPP-2.docx
+│   │   │   ├── 05-MTSP OPP-CPP.docx
+│   │   │   ├── 06-MTSP PA-PE-1.docx
+│   │   │   ├── 06-MTSP PA-PE-2.docx
+│   │   │   ├── 06-MTSP PA-PE.docx
+│   │   │   ├── 07-MTSP OPP-MPET-PE-1.docx
+│   │   │   ├── 07-MTSP OPP-MPET-PE.docx
+│   │   │   ├── 08-MTSP OPP-AL-PE-1.docx
+│   │   │   ├── 08-MTSP OPP-AL-PE.docx
+│   │   │   ├── 09-MTSP PET-PE-1.docx
+│   │   │   ├── 09-MTSP PET-PE.docx
+│   │   │   ├── 10-MTSP PET-PA-PE-1.docx
+│   │   │   ├── 10-MTSP PET-PA-PE.docx
+│   │   │   ├── 11-MTCV-NV-Tap-vu.docx
+│   │   │   ├── 11-MTSP PET-CPP-1.docx
+│   │   │   ├── 11-MTSP PET-CPP.docx
 │   │   ├── desktop.ini
 │   📁 02-TAI LIEU BEN NGOAI ISO 9001-2015
 │   │   ├── .DS_Store
@@ -1474,5 +1149,3 @@ Dùng để hỏi và theo dõi thông tin của công ty
 │   │   ├── HSCB-13 OPP-PET-CPP.docx
 │   │   ├── desktop.ini
 │   ├── desktop.ini
-├── pythonTreeFolder.py
-├── tree_output.txt
