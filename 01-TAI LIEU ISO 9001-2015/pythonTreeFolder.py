@@ -10,7 +10,7 @@ def print_tree(start_path, prefix='', file=None):
             print(f"{prefix}├── {item}", file=file)
 
 # 👉 THAY đường dẫn dưới đây bằng đường dẫn folder của bạn
-root_dir = r"D:\TLPChatBotData"
+root_dir = r"D:\ChatbotTalopack\"
 
 with open("tree_output.txt", "w", encoding="utf-8") as f:
     print_tree(root_dir, file=f)

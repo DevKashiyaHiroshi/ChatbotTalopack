@@ -1,33 +1,282 @@
-import os
-import csv
-
-# Đường dẫn đến thư mục gốc của hệ thống ISO
-root_folder = "01-ISO9001-2015 SYSTEM TLP"
-
-# Danh sách giả lập (đã được tạo từ sơ đồ) – trong thực tế bạn sẽ dùng os.walk nếu có thư mục thật
-# Ở đây, ta sẽ tạo một vài dòng mô phỏng dữ liệu CSV
-
-# Mô phỏng một số đường dẫn và tên file từ sơ đồ thư mục đã cho
-file_paths = [
-    "01-ISO9001-2015 SYSTEM TLP/01-TAI LIEU ISO 9001-2015/Biểu mẫu/01 NHẬT KÝ MÁY INForm mẫu.xlsx.xlsx",
-    "01-ISO9001-2015 SYSTEM TLP/01-TAI LIEU ISO 9001-2015/Kế hoạch/KE HOACH THỰC HIỆN 2024 -KHO.xlsx",
-    "01-ISO9001-2015 SYSTEM TLP/03-HO SO ISO 9001-2015/01-BAO CAO THANG/Nam 2023/BAO-CAO-TH5/BAO-CAO-MUA-HANG-THANG-05.docx",
-    "01-ISO9001-2015 SYSTEM TLP/02-TAI LIEU BEN NGOAI ISO 9001-2015/01-LUAT LAO DONG/LUAT-ATVSLĐ84_2015_QH13.doc",
-    "01-ISO9001-2015 SYSTEM TLP/01-TAI LIEU ISO 9001-2015/Mục tiêu/Muc tieu chat luong - ATVSTP cong ty 2023.doc"
-]
-
-# Tạo danh sách dữ liệu cho CSV
-csv_data = [["Folder", "Filename", "Extension", "Full Path"]]
-for path in file_paths:
-    folder = os.path.dirname(path)
-    filename = os.path.basename(path)
-    name, ext = os.path.splitext(filename)
-    csv_data.append([folder, name, ext, path])
-
-# Ghi vào file CSV
-csv_path = "/mnt/data/iso_document_index.csv"
-with open(csv_path, mode='w', newline='', encoding='utf-8') as file:
-    writer = csv.writer(file)
-    writer.writerows(csv_data)
-
-csv_path
+﻿Tên,Tóm tắt,Loại,Phòng ban,Đường dẫn nội bộ
+SO TAY CHAT LUONG - ATTP - TLP.ppt,SO TAY CHAT LUONG   ATTP   TLP,Tài liệu khác,Chưa xác định,SO TAY CHAT LUONG - ATTP - TLP.ppt
+gioi thieu chung he thong chat luong - ATVSTP.docx,gioi thieu chung he thong chat luong   ATVSTP,Tài liệu khác,Chưa xác định,00-phan chung-gioi thieu cong ty - ok\gioi thieu chung he thong chat luong - ATVSTP.docx
+TALOPACK PROFILE 2021.pdf,TALOPACK PROFILE 2021.pdf,Tài liệu khác,Chưa xác định,00-phan chung-gioi thieu cong ty - ok\TALOPACK PROFILE 2021.pdf
+1-boi canh va chien luoc TALOPACK 2022.doc,1 boi canh va chien luoc TALOPACK 2022,Tài liệu khác,Chưa xác định,01-boi canh va chien luoc\1-boi canh va chien luoc TALOPACK 2022.doc
+1-boi canh va chien luoc TALOPACK 2023.doc,1 boi canh va chien luoc TALOPACK 2023,Tài liệu khác,Chưa xác định,01-boi canh va chien luoc\1-boi canh va chien luoc TALOPACK 2023.doc
+1-boi canh va chien luoc TALOPACK 2024.doc,1 boi canh va chien luoc TALOPACK 2024,Tài liệu khác,Chưa xác định,01-boi canh va chien luoc\1-boi canh va chien luoc TALOPACK 2024.doc
+04 chinh-sach-chat-luong-atvstp-2021.docx,04 chinh sach chat luong atvstp 2021,Tài liệu khác,Chưa xác định,02-chinh sach ok\04 chinh-sach-chat-luong-atvstp-2021.docx
+02-Ke-hoach-hanh-dong-2022.docx,02 Ke hoach hanh dong 2022,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\02-Ke-hoach-hanh-dong-2022.docx
+020720_MT-6 thang cuoi 2020.pdf,020720 MT 6 thang cuoi 2020.pdf,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\01-muc tieu ke hoach\nam 2020\020720_MT-6 thang cuoi 2020.pdf
+MUC TIEU NAM 2020 THEO THANG VA SALE.xlsx,MUC TIEU NAM 2020 THEO THANG VA SALE,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\01-muc tieu ke hoach\nam 2020\MUC TIEU NAM 2020 THEO THANG VA SALE.xlsx
+MỤC TIÊU PHONG KINH DOANH 2020.docx,MỤC TIÊU PHONG KINH DOANH 2020,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\01-muc tieu ke hoach\nam 2020\MỤC TIÊU PHONG KINH DOANH 2020.docx
+KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2023.xlsx,KE HOACH BAO TRI BAO DUONG NAM 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Ke hoach bao tri bao duong\KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2023.xlsx
+KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2024.xlsx,KE HOACH BAO TRI BAO DUONG NAM 2024,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Ke hoach bao tri bao duong\KE-HOACH-BAO-TRI-BAO-DUONG-NAM 2024.xlsx
+02-MUC TIEU HCNS 2023.docx,02 MUC TIEU HCNS 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach HCNS\02-MUC TIEU HCNS 2023.docx
+02-MUC TIEU HCNS-2022.docx,02 MUC TIEU HCNS 2022,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach HCNS\NAM 2022\02-MUC TIEU HCNS-2022.docx
+ke hoach thuc hien - HCNS 2022.xlsx,ke hoach thuc hien   HCNS 2022,Kế hoạch,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach HCNS\NAM 2022\ke hoach thuc hien - HCNS 2022.xlsx
+02-MUC TIEU HCNS 2023.docx,02 MUC TIEU HCNS 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach HCNS\NAM 2023\02-MUC TIEU HCNS 2023.docx
+ke hoach thuc hien muc tieu 2023- HCNS.xlsx,ke hoach thuc hien muc tieu 2023  HCNS,Kế hoạch,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach HCNS\NAM 2023\ke hoach thuc hien muc tieu 2023- HCNS.xlsx
+02-MUC TIEU HCNS 2024.docx,02 MUC TIEU HCNS 2024,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach HCNS\NĂM 2024\02-MUC TIEU HCNS 2024.docx
+Ke hoach dao tao 2024 (1).doc,Ke hoach dao tao 2024 (1),Kế hoạch,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach HCNS\NĂM 2024\Ke hoach dao tao 2024 (1).doc
+05-MUC TIEU 2023-kho.doc,05 MUC TIEU 2023 kho,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach KHO\NAM 2023\05-MUC TIEU 2023-kho.doc
+KE HOACH THỰC HIỆN 2024 -KHO.xlsx,KE HOACH THỰC HIỆN 2024  KHO,Kế hoạch,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach KHO\NAM 2024\KE HOACH THỰC HIỆN 2024 -KHO.xlsx
+KE HOACH thuc hien 2023 -KD .xlsx,KE HOACH thuc hien 2023  KD,Kế hoạch,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach KID\NAM 2023\KE HOACH thuc hien 2023 -KD .xlsx
+MUC TIEU PHONG KINH DOANH 2023.docx,MUC TIEU PHONG KINH DOANH 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach KID\NAM 2023\MUC TIEU PHONG KINH DOANH 2023.docx
+KE HOACH thuc hien 2024.xlsx,KE HOACH thuc hien 2024,Kế hoạch,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach KID\NAM 2024\KE HOACH thuc hien 2024.xlsx
+MUC TIEU PHONG KINH DOANH 2024.docx,MUC TIEU PHONG KINH DOANH 2024,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach KID\NAM 2024\MUC TIEU PHONG KINH DOANH 2024.docx
+02 actionplan muctieu ISO.xlsx,02 actionplan muctieu ISO,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach SX\02 actionplan muctieu ISO.xlsx
+muc tieu sx 2021.docx,muc tieu sx 2021,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach SX\NAM 2021\muc tieu sx 2021.docx
+01 Mục tiêu San xuat 2022.docx,01 Mục tiêu San xuat 2022,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach SX\NAM 2022\01 Mục tiêu San xuat 2022.docx
+02 actionplan muctieu ISO.xlsx,02 actionplan muctieu ISO,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach SX\NAM 2022\02 actionplan muctieu ISO.xlsx
+01 Mục tiêu San xuat 2023 .docx,01 Mục tiêu San xuat 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach SX\NAM 2023\01 Mục tiêu San xuat 2023 .docx
+ACTION PLAN 2024.xlsx,ACTION PLAN 2024,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu - Ke hoach SX\NAM 2024\ACTION PLAN 2024.xlsx
+Muc-tieu-chat-luong-HC-NS-2022.docx,Muc tieu chat luong HC NS 2022,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu- Chat luong HCNS\Muc-tieu-chat-luong-HC-NS-2022.docx
+Muc-tieu-chat-luong-HC-NS-2023.docx,Muc tieu chat luong HC NS 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc tieu- Chat luong HCNS\Muc-tieu-chat-luong-HC-NS-2023.docx
+Muc tieu chat luong - ATVSTP cong ty 2021.doc,Muc tieu chat luong   ATVSTP cong ty 2021,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-ATVSTP\Muc tieu chat luong - ATVSTP cong ty 2021.doc
+Muc tieu chat luong - ATVSTP cong ty 2022.doc,Muc tieu chat luong   ATVSTP cong ty 2022,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-ATVSTP\Muc tieu chat luong - ATVSTP cong ty 2022.doc
+Muc tieu chat luong - ATVSTP cong ty 2023.doc,Muc tieu chat luong   ATVSTP cong ty 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-ATVSTP\Muc tieu chat luong - ATVSTP cong ty 2023.doc
+Muc tieu chat luong - ATVSTP cong ty 2024.doc,Muc tieu chat luong   ATVSTP cong ty 2024,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-ATVSTP\Muc tieu chat luong - ATVSTP cong ty 2024.doc
+01-Muc-tieu-chat-luong MUA HÀNG 2023  .docx,01 Muc tieu chat luong MUA HÀNG 2023,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-MUA HANG\2023\01-Muc-tieu-chat-luong MUA HÀNG 2023  .docx
+02 - KE HOACH THUC HIEN MUC TIEU MUA HANG 2023.xlsx,02   KE HOACH THUC HIEN MUC TIEU MUA HANG 2023,Kế hoạch,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-MUA HANG\2023\02 - KE HOACH THUC HIEN MUC TIEU MUA HANG 2023.xlsx
+KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024 (1).xlsx,KE HOACH THUC HIEN MUC TIEU MUA HANG NAM 2024 (1),Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-MUA HANG\2024\KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024 (1).xlsx
+KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024.xlsx,KE HOACH THUC HIEN MUC TIEU MUA HANG NAM 2024,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Muc-tieu-chat-luong-MUA HANG\2024\KE-HOACH-THUC-HIEN-MUC-TIEU-MUA-HANG-NAM-2024.xlsx
+01 Mục tiêu kỹ thuật 2025.docx,01 Mục tiêu kỹ thuật 2025,Tài liệu khác,Chưa xác định,03-muc tieu va ke hoach công ty\Mục tieu-Ke hoach KYT\01 Mục tiêu kỹ thuật 2025.docx
+01-so-do-to-chuc-cong-ty-2021.docx,01 so do to chuc cong ty 2021,Tài liệu khác,Chưa xác định,04-to chuc va MTCV-OK\01-so-do-to-chuc-cong-ty-2021.docx
+Ban ISO TLP.doc,Ban ISO TLP,Tài liệu khác,Chưa xác định,04-to chuc va MTCV-OK\Ban ISO TLP.doc
+QĐ-thanh-lap-5S.docx,QĐ thanh lap 5S,Tài liệu khác,Chưa xác định,04-to chuc va MTCV-OK\QĐ-thanh-lap-5S.docx
+1-MTCV- Giam doc.doc,1 MTCV  Giam doc,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\01-BGD\1-MTCV- Giam doc.doc
+2-MTCV- Dai dien lanh dao.doc,2 MTCV  Dai dien lanh dao,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\01-BGD\2-MTCV- Dai dien lanh dao.doc
+03-MTCV- Giam doc kinh doanh.doc,03 MTCV  Giam doc kinh doanh,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\02-phong kinh doanh\03-MTCV- Giam doc kinh doanh.doc
+06-MTCV- Trương phong kinh doanh.doc,06 MTCV  Trương phong kinh doanh,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\02-phong kinh doanh\06-MTCV- Trương phong kinh doanh.doc
+07-MTCV- Nhan vien kinh doanh.doc,07 MTCV  Nhan vien kinh doanh,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\02-phong kinh doanh\07-MTCV- Nhan vien kinh doanh.doc
+08-MTCV- Trợ lý  kinh doanh.doc,08 MTCV  Trợ lý  kinh doanh,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\02-phong kinh doanh\08-MTCV- Trợ lý  kinh doanh.doc
+09-MTCV- Nhan vien thiet ke.doc,09 MTCV  Nhan vien thiet ke,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\02-phong kinh doanh\09-MTCV- Nhan vien thiet ke.doc
+04-MTCV-Truong phong HCNS ke toan.docx,04 MTCV Truong phong HCNS ke toan,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\03-phong HCNS - KE TOAN\04-MTCV-Truong phong HCNS ke toan.docx
+10-MTCV- NV hanh chinh nhan su.doc,10 MTCV  NV hanh chinh nhan su,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\03-phong HCNS - KE TOAN\HCNS\10-MTCV- NV hanh chinh nhan su.doc
+11-MTCV-NV-Tap-vu.docx,11 MTCV NV Tap vu,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\03-phong HCNS - KE TOAN\HCNS\11-MTCV-NV-Tap-vu.docx
+12-MTCV-NV-Bao-ve.docx,12 MTCV NV Bao ve,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\03-phong HCNS - KE TOAN\HCNS\12-MTCV-NV-Bao-ve.docx
+13-MTCV- Nhan vien ke toan.doc,13 MTCV  Nhan vien ke toan,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\03-phong HCNS - KE TOAN\ke toan\13-MTCV- Nhan vien ke toan.doc
+14-MTCV- Nhan vien kho.doc,14 MTCV  Nhan vien kho,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\03-phong HCNS - KE TOAN\ke toan\14-MTCV- Nhan vien kho.doc
+15-MTCV- Nhan vien ho tro kho.doc,15 MTCV  Nhan vien ho tro kho,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\03-phong HCNS - KE TOAN\ke toan\15-MTCV- Nhan vien ho tro kho.doc
+05-MTCV- Giam doc san xuat.doc,05 MTCV  Giam doc san xuat,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\05-MTCV- Giam doc san xuat.doc
+21-MTCV- Truong phong ky thuat.doc,21 MTCV  Truong phong ky thuat,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\06-phong ky thuat\21-MTCV- Truong phong ky thuat.doc
+22-MTCV- Thu ky ky thuat.doc,22 MTCV  Thu ky ky thuat,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\06-phong ky thuat\22-MTCV- Thu ky ky thuat.doc
+23-MTCV- nhan vien ky thuat.doc,23 MTCV  nhan vien ky thuat,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\06-phong ky thuat\23-MTCV- nhan vien ky thuat.doc
+20-MTCV- NV bao tri.doc,20 MTCV  NV bao tri,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\Co dien\20-MTCV- NV bao tri.doc
+16-MTCV- Thu ky san xuat.docx,16 MTCV  Thu ky san xuat,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\KHSX-VT\16-MTCV- Thu ky san xuat.docx
+19-MTCV- Nhan vien vat tu.doc,19 MTCV  Nhan vien vat tu,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\KHSX-VT\19-MTCV- Nhan vien vat tu.doc
+17-MTCV- To truong.doc,17 MTCV  To truong,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\San xuat\17-MTCV- To truong.doc
+18-MTCV- Cong nhan.doc,18 MTCV  Cong nhan,Mô tả công việc,Chưa xác định,04-to chuc va MTCV-OK\Mo ta cong viec\04-nha may\San xuat\18-MTCV- Cong nhan.doc
+QT-01-QT XEM XET CUA LANH DAO QL CHÂT LƯỢNG _ ATVSTP.doc,QT 01 QT XEM XET CUA LANH DAO QL CHÂT LƯỢNG   ATVSTP,Quy trình,Chưa xác định,05-xem xet lanh dao OK\QT-01-QT XEM XET CUA LANH DAO QL CHÂT LƯỢNG _ ATVSTP.doc
+QT-01-M01 BAO CAO THANG.doc,QT 01 M01 BAO CAO THANG,Quy trình,Chưa xác định,05-xem xet lanh dao OK\BIEU MAU\QT-01-M01 BAO CAO THANG.doc
+QT-01-M02- Bang tong hop du lieu.doc,QT 01 M02  Bang tong hop du lieu,Quy trình,Chưa xác định,05-xem xet lanh dao OK\BIEU MAU\QT-01-M02- Bang tong hop du lieu.doc
+QT-01-M03 - Bien ban hop.doc,QT 01 M03   Bien ban hop,Quy trình,Chưa xác định,05-xem xet lanh dao OK\BIEU MAU\QT-01-M03 - Bien ban hop.doc
+QT-02-QT DANH GIA NOI BO.doc,QT 02 QT DANH GIA NOI BO,Quy trình,Chưa xác định,06-danh gia noi bo OK\QT-02-QT DANH GIA NOI BO.doc
+QT-02-M01-Ke hoach danh gia noi bo.doc,QT 02 M01 Ke hoach danh gia noi bo,Quy trình,Chưa xác định,06-danh gia noi bo OK\BIEU MAU\QT-02-M01-Ke hoach danh gia noi bo.doc
+QT-02-M02 Chuong trinh danh gia noi bo.doc,QT 02 M02 Chuong trinh danh gia noi bo,Quy trình,Chưa xác định,06-danh gia noi bo OK\BIEU MAU\QT-02-M02 Chuong trinh danh gia noi bo.doc
+QT-02-M03-Bien ban hop danh gia noi bo.doc,QT 02 M03 Bien ban hop danh gia noi bo,Quy trình,Chưa xác định,06-danh gia noi bo OK\BIEU MAU\QT-02-M03-Bien ban hop danh gia noi bo.doc
+QT-02-M04bao cao danh gia noi bo.xls,QT 02 M04bao cao danh gia noi bo,Quy trình,Chưa xác định,06-danh gia noi bo OK\BIEU MAU\QT-02-M04bao cao danh gia noi bo.xls
+QT-02-M05 bao cao tham dinh.doc,QT 02 M05 bao cao tham dinh,Quy trình,Chưa xác định,06-danh gia noi bo OK\BIEU MAU\QT-02-M05 bao cao tham dinh.doc
+QT-03 QT KHAC PHUC-PHONG NGUA-CAI TIEN.doc,QT 03 QT KHAC PHUC PHONG NGUA CAI TIEN,Quy trình,Chưa xác định,07-khac phuc cai tien OK\QT-03 QT KHAC PHUC-PHONG NGUA-CAI TIEN.doc
+QT-03-M01 Bao cao hoat dong KP - PN - CT.doc,QT 03 M01 Bao cao hoat dong KP   PN   CT,Quy trình,Chưa xác định,07-khac phuc cai tien OK\QT-03-M01 Bao cao hoat dong KP - PN - CT.doc
+"QT-04-BM- Bang danh gia rui ro, ke hoach quan ly rui ro.xls","QT 04 BM  Bang danh gia rui ro, ke hoach quan ly rui ro",Biểu mẫu,Chưa xác định,"08-quan ly rui ro-tri thuc OK\QT-04-BM- Bang danh gia rui ro, ke hoach quan ly rui ro.xls"
+QT-04-qui trinh quan ly tri thuc.doc,QT 04 qui trinh quan ly tri thuc,Quy trình,Chưa xác định,08-quan ly rui ro-tri thuc OK\QT-04-qui trinh quan ly tri thuc.doc
+QT-05-BM01-Phieu bao su co.doc,QT 05 BM01 Phieu bao su co,Biểu mẫu,Chưa xác định,09-quan ly su KPH OK\QT-05-BM01-Phieu bao su co.doc
+QT-05-quy trinh kiem soat san pham khong phu hop.doc,QT 05 quy trinh kiem soat san pham khong phu hop,Quy trình,Chưa xác định,09-quan ly su KPH OK\QT-05-quy trinh kiem soat san pham khong phu hop.doc
+QT-06-BM01-Phieu tiep nhan va giai quyet khieu nai moi.doc,QT 06 BM01 Phieu tiep nhan va giai quyet khieu nai moi,Biểu mẫu,Chưa xác định,10-QT GIAI QUYET KHIEU NAI - OK\QT-06-BM01-Phieu tiep nhan va giai quyet khieu nai moi.doc
+QT-06-Quy trinh giai quyet khieu nai.doc,QT 06 Quy trinh giai quyet khieu nai,Quy trình,Chưa xác định,10-QT GIAI QUYET KHIEU NAI - OK\QT-06-Quy trinh giai quyet khieu nai.doc
+QUY TRINH BAN HANG.doc,QUY TRINH BAN HANG,Quy trình,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\QUY TRINH BAN HANG.doc
+07-BANG TIEU CHI DANH GIA KHACH HANG P.KD.docx,07 BANG TIEU CHI DANH GIA KHACH HANG P.KD,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\07-BANG TIEU CHI DANH GIA KHACH HANG P.KD.docx
+08-thong tin yeu cau thiet ke.docx,08 thong tin yeu cau thiet ke,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\08-thong tin yeu cau thiet ke.docx
+M01-DANH SACH KHACH HANG.xls,M01 DANH SACH KHACH HANG,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\M01-DANH SACH KHACH HANG.xls
+M02-BAO GIA.docx,M02 BAO GIA,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\M02-BAO GIA.docx
+M03-Phieu yeu cau lam truc.docx,M03 Phieu yeu cau lam truc,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\M03-Phieu yeu cau lam truc.docx
+M04-DON DAT HANG (KH).docx,M04 DON DAT HANG (KH),Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\M04-DON DAT HANG (KH).docx
+M05-HOP DONG MAU MUA BAN TANG LONG PACK-01.docx,M05 HOP DONG MAU MUA BAN TANG LONG PACK 01,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\M05-HOP DONG MAU MUA BAN TANG LONG PACK-01.docx
+M06-MAU HOP DONG NGUYEN TAC TANG LONG PACK-01.docx,M06 MAU HOP DONG NGUYEN TAC TANG LONG PACK 01,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\BM moi\M06-MAU HOP DONG NGUYEN TAC TANG LONG PACK-01.docx
+01 Phan tich thi truong va nguoi tieu dung.doc,01 Phan tich thi truong va nguoi tieu dung,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\maketing\01 Phan tich thi truong va nguoi tieu dung.doc
+02 Phan tich thi truong B2B.doc,02 Phan tich thi truong B2B,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\maketing\02 Phan tich thi truong B2B.doc
+03 Nghien cuu va lua chon thi truong muc tieu.doc,03 Nghien cuu va lua chon thi truong muc tieu,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\maketing\03 Nghien cuu va lua chon thi truong muc tieu.doc
+03 Phan tich nganh va doi thu canh tranh.doc,03 Phan tich nganh va doi thu canh tranh,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\maketing\03 Phan tich nganh va doi thu canh tranh.doc
+04 Dinh vi san pham.doc,04 Dinh vi san pham,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\maketing\04 Dinh vi san pham.doc
+05 Thiet ke chien luoc Marketing.doc,05 Thiet ke chien luoc Marketing,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\maketing\05 Thiet ke chien luoc Marketing.doc
+06  Kiem tra cac hoat dong Marketing.doc,06  Kiem tra cac hoat dong Marketing,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\01-QT BAN HANG\maketing\06  Kiem tra cac hoat dong Marketing.doc
+Danh gia thoa man khach hang.doc,Danh gia thoa man khach hang,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\02-QT DG THOA MAN CUA KH - ok\Danh gia thoa man khach hang.doc
+M01-Noi dung-Phieu tham do-010619.doc,M01 Noi dung Phieu tham do 010619,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\02-QT DG THOA MAN CUA KH - ok\Bieu mau\M01-Noi dung-Phieu tham do-010619.doc
+M02 Thong ke phan tich su thoa man cua khach hang.doc,M02 Thong ke phan tich su thoa man cua khach hang,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\02-QT DG THOA MAN CUA KH - ok\Bieu mau\M02 Thong ke phan tich su thoa man cua khach hang.doc
+03-Quy trinh thu hoi san pham.doc,03 Quy trinh thu hoi san pham,Quy trình,Chưa xác định,11-PHONG KINH DOANH\03-QUY TRINH THU HOI SAN PHAM - ok\03-Quy trinh thu hoi san pham.doc
+01-HUONG DAN  LAM TRUC IN.doc,01 HUONG DAN  LAM TRUC IN,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\04-HUONG DAN CONG VIEC\01-HUONG DAN  LAM TRUC IN.doc
+02-HUONG DAN LEN DON HANG - HOP DONG.doc,02 HUONG DAN LEN DON HANG   HOP DONG,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\04-HUONG DAN CONG VIEC\02-HUONG DAN LEN DON HANG - HOP DONG.doc
+03-HUONG DAN TINH GIA- BAO GIA.doc,03 HUONG DAN TINH GIA  BAO GIA,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\04-HUONG DAN CONG VIEC\03-HUONG DAN TINH GIA- BAO GIA.doc
+04-HUONG DAN THEO DOI QT THIET KE-DUYET MAQUETTE P.KD.doc,04 HUONG DAN THEO DOI QT THIET KE DUYET MAQUETTE P.KD,Quy trình,Chưa xác định,11-PHONG KINH DOANH\04-HUONG DAN CONG VIEC\04-HUONG DAN THEO DOI QT THIET KE-DUYET MAQUETTE P.KD.doc
+05-CHINH SACH CHAM SOC KHACH HANG.docx,05 CHINH SACH CHAM SOC KHACH HANG,Tài liệu khác,Chưa xác định,11-PHONG KINH DOANH\04-HUONG DAN CONG VIEC\05-CHINH SACH CHAM SOC KHACH HANG.docx
+Quy trinh kiem soat tai lieu.doc,Quy trinh kiem soat tai lieu,Quy trình,Chưa xác định,12-HCNS - KHO\12-01-HCNS\01-Qui-trinh-kiem-soat-tai-lieu - ok\Quy trinh kiem soat tai lieu.doc
+M01 Danh muc kiem soat tai lieu.doc,M01 Danh muc kiem soat tai lieu,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\01-Qui-trinh-kiem-soat-tai-lieu - ok\Bieu mau\M01 Danh muc kiem soat tai lieu.doc
+MAU GAY FILE HO SO.docx,MAU GAY FILE HO SO,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\02-Qui-trinh-kiem-soat-ho-so - ok\MAU GAY FILE HO SO.docx
+Quy trinh kiem soat ho so.doc,Quy trinh kiem soat ho so,Quy trình,Chưa xác định,12-HCNS - KHO\12-01-HCNS\02-Qui-trinh-kiem-soat-ho-so - ok\Quy trinh kiem soat ho so.doc
+M01 Danh muc kiem soat ho so.doc,M01 Danh muc kiem soat ho so,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\02-Qui-trinh-kiem-soat-ho-so - ok\Bieu mau\M01 Danh muc kiem soat ho so.doc
+M02 Phieu de nghi huy ho so.doc,M02 Phieu de nghi huy ho so,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\02-Qui-trinh-kiem-soat-ho-so - ok\Bieu mau\M02 Phieu de nghi huy ho so.doc
+M01 Phieu de nghi tuyen dung.doc,M01 Phieu de nghi tuyen dung,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\03-QT-Tuyen-dung - OK\M01 Phieu de nghi tuyen dung.doc
+M02-bang-thu-thap-du-lieu-ung-vien-co-trinh-do-chuyen-mon.doc,M02 bang thu thap du lieu ung vien co trinh do chuyen mon,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\03-QT-Tuyen-dung - OK\M02-bang-thu-thap-du-lieu-ung-vien-co-trinh-do-chuyen-mon.doc
+M03- bang-thu-thap-du-lieu-ung-vien-danh-cho-ldpt.doc,M03  bang thu thap du lieu ung vien danh cho ldpt,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\03-QT-Tuyen-dung - OK\M03- bang-thu-thap-du-lieu-ung-vien-danh-cho-ldpt.doc
+M04-Phieu kiem soat qua trinh tuyen dung co trinh do chuyen mon.docx,M04 Phieu kiem soat qua trinh tuyen dung co trinh do chuyen mon,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\03-QT-Tuyen-dung - OK\M04-Phieu kiem soat qua trinh tuyen dung co trinh do chuyen mon.docx
+M05-Phieu kiem soat qua trinh tuyen dung_LDPT.doc,M05 Phieu kiem soat qua trinh tuyen dung LDPT,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\03-QT-Tuyen-dung - OK\M05-Phieu kiem soat qua trinh tuyen dung_LDPT.doc
+Qui trinh Tuyen dung.doc,Qui trinh Tuyen dung,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\03-QT-Tuyen-dung - OK\Qui trinh Tuyen dung.doc
+Quy trinh dao tao.doc,Quy trinh dao tao,Quy trình,Chưa xác định,12-HCNS - KHO\12-01-HCNS\04-QT-Dao-tao - OK\Quy trinh dao tao.doc
+M01-Ke hoach dao tao.doc,M01 Ke hoach dao tao,Kế hoạch,Chưa xác định,12-HCNS - KHO\12-01-HCNS\04-QT-Dao-tao - OK\Bieu mau\M01-Ke hoach dao tao.doc
+M02 Phieu kiem soat qua trinh dao tao.doc,M02 Phieu kiem soat qua trinh dao tao,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-01-HCNS\04-QT-Dao-tao - OK\Bieu mau\M02 Phieu kiem soat qua trinh dao tao.doc
+M01-Phieu nhap vattu.xlsx,M01 Phieu nhap vattu,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap NVL\M01-Phieu nhap vattu.xlsx
+M02-Phieu tra vat tu thua.doc,M02 Phieu tra vat tu thua,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap NVL\M02-Phieu tra vat tu thua.doc
+M03-PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx,M03 PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap NVL\M03-PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx
+M03A-Phieu xuat kho vat tu tra-sua.doc,M03A Phieu xuat kho vat tu tra sua,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap NVL\M03A-Phieu xuat kho vat tu tra-sua.doc
+M04-Bang nhap xuat ton.xlsx,M04 Bang nhap xuat ton,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap NVL\M04-Bang nhap xuat ton.xlsx
+Quy trinh xuat nhap nguyen vat lieu.doc-02.05.2022.doc,Quy trinh xuat nhap nguyen vat lieu 02.05.2022,Quy trình,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap NVL\Quy trinh xuat nhap nguyen vat lieu.doc-02.05.2022.doc
+M01-Phieu nhap kho tp.doc,M01 Phieu nhap kho tp,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap TP\M01-Phieu nhap kho tp.doc
+M02-Phieu_xuat_kho_ban_hang.xls,M02 Phieu xuat kho ban hang,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap TP\M02-Phieu_xuat_kho_ban_hang.xls
+M03-Bang nhap xuat ton tp.xlsx,M03 Bang nhap xuat ton tp,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap TP\M03-Bang nhap xuat ton tp.xlsx
+Quy trinh xuat nhap thanh pham.doc,Quy trinh xuat nhap thanh pham,Quy trình,Chưa xác định,12-HCNS - KHO\12-02-KHO\01-QT xuat nhap TP\Quy trinh xuat nhap thanh pham.doc
+01-huong dan bao quan mang.doc,01 huong dan bao quan mang,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\03-Cac huong dan - OK\01-huong dan bao quan mang.doc
+02-bao quan hoa chat.doc,02 bao quan hoa chat,Tài liệu khác,Chưa xác định,12-HCNS - KHO\12-02-KHO\03-Cac huong dan - OK\02-bao quan hoa chat.doc
+02 actionplan muctieu ISO.xlsx,02 actionplan muctieu ISO,Tài liệu khác,Chưa xác định,13-NHA MAY\02 actionplan muctieu ISO.xlsx
+03-danh muc rui ro san xuat.xlsx,03 danh muc rui ro san xuat,Tài liệu khác,Chưa xác định,13-NHA MAY\03-danh muc rui ro san xuat.xlsx
+QT SAN XUAT.docx,QT SAN XUAT,Quy trình,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\QT SAN XUAT.docx
+M01-Ke-hoach-san-xuat.xlsx,M01 Ke hoach san xuat,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M01-Ke-hoach-san-xuat.xlsx
+M02-Lenh san xuat.xlsx,M02 Lenh san xuat,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M02-Lenh san xuat.xlsx
+M03-NHẬT KÝ MÁY INForm mẫu (CÓ THEO DÕI MÁY IN).xlsx .xlsx,M03 NHẬT KÝ MÁY INForm mẫu (CÓ THEO DÕI MÁY IN),Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M03-NHẬT KÝ MÁY INForm mẫu (CÓ THEO DÕI MÁY IN).xlsx .xlsx
+M04-bao cao san xuat may GHEP.xlsx,M04 bao cao san xuat may GHEP,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M04-bao cao san xuat may GHEP.xlsx
+M05 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx,M05 MẪU THEO DÕI THÀNH PHẨM CHIA,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M05 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx
+M06-Bao cao san xuat hang ngay TÚI.xlsx,M06 Bao cao san xuat hang ngay TÚI,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M06-Bao cao san xuat hang ngay TÚI.xlsx
+M07-08-09-Tem thung - cuon TP.xlsx,M07 08 09 Tem thung   cuon TP,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M07-08-09-Tem thung - cuon TP.xlsx
+M10-11-12-13-14TEM IN - GHEP.xlsx,M10 11 12 13 14TEM IN   GHEP,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M10-11-12-13-14TEM IN - GHEP.xlsx
+M15-Tong hop hang gia cong.xlsx,M15 Tong hop hang gia cong,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\BM san xuat\M15-Tong hop hang gia cong.xlsx
+01 NHẬT KÝ MÁY INForm mẫu.xlsx.xlsx,01 NHẬT KÝ MÁY INForm mẫu,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\01 NHẬT KÝ MÁY INForm mẫu.xlsx.xlsx
+02 bao cao san xuat may GHEP.xlsx,02 bao cao san xuat may GHEP,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\02 bao cao san xuat may GHEP.xlsx
+03-Bao cao san xuat hang ngay TÚI.xlsx,03 Bao cao san xuat hang ngay TÚI,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\03-Bao cao san xuat hang ngay TÚI.xlsx
+04 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx,04 MẪU THEO DÕI THÀNH PHẨM CHIA,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\04 MẪU THEO DÕI THÀNH PHẨM CHIA.xlsx
+M02-theo dõi dụng cụ cắt gọt.xlsx,M02 theo dõi dụng cụ cắt gọt,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\M02-theo dõi dụng cụ cắt gọt.xlsx
+PHIẾU NHẬP KHO THÀNH PHẨM EXCEL.xlsx,PHIẾU NHẬP KHO THÀNH PHẨM EXCEL,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\PHIẾU NHẬP KHO THÀNH PHẨM EXCEL.xlsx
+PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx,PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\PHIẾU ĐỀ NGHỊ KIÊM XUẤT VẬT TƯ.xlsx
+TEM CHIA-LỚN.xlsx,TEM CHIA LỚN,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\TEM CHIA-LỚN.xlsx
+TEM CHIA-NHỎ).xlsx,TEM CHIA NHỎ),Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\TEM CHIA-NHỎ).xlsx
+TEM IN - GHEP.xlsx,TEM IN   GHEP,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\01-QT SAN XUAT\Form SX chua sua\TEM IN - GHEP.xlsx
+03-HD NHAN BIET VA TRUY TIM NGUON GOC.doc,03 HD NHAN BIET VA TRUY TIM NGUON GOC,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\02-CAC HUONG DAN\03-HD NHAN BIET VA TRUY TIM NGUON GOC.doc
+04-Huong dan van hanh may IN.doc,04 Huong dan van hanh may IN,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\02-CAC HUONG DAN\04-Huong dan van hanh may IN.doc
+05-Huong dan van hanh may Ghep.doc,05 Huong dan van hanh may Ghep,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\02-CAC HUONG DAN\05-Huong dan van hanh may Ghep.doc
+06-Huong dan van hanh may Tui.doc,06 Huong dan van hanh may Tui,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\02-CAC HUONG DAN\06-Huong dan van hanh may Tui.doc
+07-Huong dan van hanh may Tensile.doc,07 Huong dan van hanh may Tensile,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\02-CAC HUONG DAN\07-Huong dan van hanh may Tensile.doc
+08-Huong dan van hanh may Dan.doc,08 Huong dan van hanh may Dan,Tài liệu khác,Chưa xác định,13-NHA MAY\01-SAN XUAT\02-CAC HUONG DAN\08-Huong dan van hanh may Dan.doc
+1 - Quy trinh bao tri sua chua thiet bi - Ha tang cơ sơ - 220623.doc,1   Quy trinh bao tri sua chua thiet bi   Ha tang cơ sơ   220623,Quy trình,Chưa xác định,13-NHA MAY\02-CO DIEN\1 - Quy trinh bao tri sua chua thiet bi - Ha tang cơ sơ - 220623.doc
+BM01-DanhMucMay.xlsx,BM01 DanhMucMay,Biểu mẫu,Chưa xác định,13-NHA MAY\02-CO DIEN\BM01-DanhMucMay.xlsx
+BM02-DANH MUC _ LICH BD CSHT.xlsx,BM02 DANH MUC   LICH BD CSHT,Biểu mẫu,Chưa xác định,13-NHA MAY\02-CO DIEN\BM02-DANH MUC _ LICH BD CSHT.xlsx
+BM03- NHAT KY BAO TRI.xls,BM03  NHAT KY BAO TRI,Biểu mẫu,Chưa xác định,13-NHA MAY\02-CO DIEN\BM03- NHAT KY BAO TRI.xls
+BM04-PHIEU YEU CAU-GHI NHAN SUA CHUA.xlsx,BM04 PHIEU YEU CAU GHI NHAN SUA CHUA,Biểu mẫu,Chưa xác định,13-NHA MAY\02-CO DIEN\BM04-PHIEU YEU CAU-GHI NHAN SUA CHUA.xlsx
+BM05-KIEM TRA MAY HANG NGAY.xlsx,BM05 KIEM TRA MAY HANG NGAY,Biểu mẫu,Chưa xác định,13-NHA MAY\02-CO DIEN\BM05-KIEM TRA MAY HANG NGAY.xlsx
+BM06-KIEM TRA DINH KY MÁY HANG THANG.xlsx,BM06 KIEM TRA DINH KY MÁY HANG THANG,Biểu mẫu,Chưa xác định,13-NHA MAY\02-CO DIEN\BM06-KIEM TRA DINH KY MÁY HANG THANG.xlsx
+MAY LANH NUOC-QUAT HOI NUOC - đa sua.xlsx,MAY LANH NUOC QUAT HOI NUOC   đa sua,Tài liệu khác,Chưa xác định,13-NHA MAY\02-CO DIEN\MAY LANH NUOC-QUAT HOI NUOC - đa sua.xlsx
+M01-De nghi mua hang.xlsx,M01 De nghi mua hang,Tài liệu khác,Chưa xác định,13-NHA MAY\03-KHSX-VT - ok\01-QT Mua hang\M01-De nghi mua hang.xlsx
+M02-Danh sach va danh gia nha cung cap -NEW.xls,M02 Danh sach va danh gia nha cung cap  NEW,Tài liệu khác,Chưa xác định,13-NHA MAY\03-KHSX-VT - ok\01-QT Mua hang\M02-Danh sach va danh gia nha cung cap -NEW.xls
+M03- DON DAT HANG (new).xlsx,M03  DON DAT HANG (new),Tài liệu khác,Chưa xác định,13-NHA MAY\03-KHSX-VT - ok\01-QT Mua hang\M03- DON DAT HANG (new).xlsx
+M04-KE HOACH DANH GIA NHA CUNG CAP.doc,M04 KE HOACH DANH GIA NHA CUNG CAP,Kế hoạch,Chưa xác định,13-NHA MAY\03-KHSX-VT - ok\01-QT Mua hang\M04-KE HOACH DANH GIA NHA CUNG CAP.doc
+QT MUA HANG.doc,QT MUA HANG,Quy trình,Chưa xác định,13-NHA MAY\03-KHSX-VT - ok\01-QT Mua hang\QT MUA HANG.doc
+07-Huong dan Lap ke hoach vat tu.doc,07 Huong dan Lap ke hoach vat tu,Kế hoạch,Chưa xác định,13-NHA MAY\03-KHSX-VT - ok\02-HD Cong viec\07-Huong dan Lap ke hoach vat tu.doc
+NHM-QT-04-M01-BB kiem tra vat tu.xls,NHM QT 04 M01 BB kiem tra vat tu,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\01-QT KIEM TRA NVL OK\NHM-QT-04-M01-BB kiem tra vat tu.xls
+NHM-QT-04-M02-Bien ban de nghi tra hang.doc,NHM QT 04 M02 Bien ban de nghi tra hang,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\01-QT KIEM TRA NVL OK\NHM-QT-04-M02-Bien ban de nghi tra hang.doc
+NHM-QT-04-Quy trinh kiem tra nguyen vat lieu.doc,NHM QT 04 Quy trinh kiem tra nguyen vat lieu,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\01-QT KIEM TRA NVL OK\NHM-QT-04-Quy trinh kiem tra nguyen vat lieu.doc
+NHM-QT-04-Tieu chuan ky thuat mang LLDPE.xls,NHM QT 04 Tieu chuan ky thuat mang LLDPE,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\01-QT KIEM TRA NVL OK\NHM-QT-04-Tieu chuan ky thuat mang LLDPE.xls
+NHM-QT-04-Tieu chuan NVL.xls,NHM QT 04 Tieu chuan NVL,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\01-QT KIEM TRA NVL OK\NHM-QT-04-Tieu chuan NVL.xls
+"NHM-QT-05-Quy trinh kiem tra ban thanh pham, thanh pham.doc","NHM QT 05 Quy trinh kiem tra ban thanh pham, thanh pham",Quy trình,Chưa xác định,"13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\NHM-QT-05-Quy trinh kiem tra ban thanh pham, thanh pham.doc"
+M01A-B-Bien ban ky duyet mau in+ghep.xls,M01A B Bien ban ky duyet mau in+ghep,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M01- kiem tra qua trinh\M01A-B-Bien ban ky duyet mau in+ghep.xls
+M01A-Bien ban ktra in.doc,M01A Bien ban ktra in,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M01- kiem tra qua trinh\M01A-Bien ban ktra in.doc
+M01B-Bien ban ktra ghep.doc,M01B Bien ban ktra ghep,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M01- kiem tra qua trinh\M01B-Bien ban ktra ghep.doc
+M01C-Bien ban ktra chia.doc,M01C Bien ban ktra chia,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M01- kiem tra qua trinh\M01C-Bien ban ktra chia.doc
+M01D-Bien ban ktra lam tui.doc,M01D Bien ban ktra lam tui,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M01- kiem tra qua trinh\M01D-Bien ban ktra lam tui.doc
+M01D-phieu do do nhot.xls,M01D phieu do do nhot,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M01- kiem tra qua trinh\M01D-phieu do do nhot.xls
+02-Form thong so may in co them do dao dong gia tri do.docx,02 Form thong so may in co them do dao dong gia tri do,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M02-Ly lich SP\02-Form thong so may in co them do dao dong gia tri do.docx
+03-02-Form thong so may ghep-chia-lam tui co them do dao dong gia tri do.docx,03 02 Form thong so may ghep chia lam tui co them do dao dong gia tri do,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M02-Ly lich SP\03-02-Form thong so may ghep-chia-lam tui co them do dao dong gia tri do.docx
+1.bia.docx,1.bia,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\02-QT KIEM TRA BTP-TP-ok\Bieu mau\M02-Ly lich SP\1.bia.docx
+02 BM Ket qua hieu chuan noi bo.xls,02 BM Ket qua hieu chuan noi bo,Biểu mẫu,Chưa xác định,13-NHA MAY\04-KY THUAT\03-QT HIEU CHUAN THIET BI DO-ok\02 BM Ket qua hieu chuan noi bo.xls
+M01 Ke hoach hieu chuan.xls,M01 Ke hoach hieu chuan,Kế hoạch,Chưa xác định,13-NHA MAY\04-KY THUAT\03-QT HIEU CHUAN THIET BI DO-ok\M01 Ke hoach hieu chuan.xls
+Quy trinh hieu chuan thiet bi do-02-01-19.doc,Quy trinh hieu chuan thiet bi do 02 01 19,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\03-QT HIEU CHUAN THIET BI DO-ok\Quy trinh hieu chuan thiet bi do-02-01-19.doc
+quy trinh trien khai sp moi.doc,quy trinh trien khai sp moi,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\04-QT TRIEN KHAI SP MOI - ok\quy trinh trien khai sp moi.doc
+M01-Yeu cau san xuat mau.doc,M01 Yeu cau san xuat mau,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\04-QT TRIEN KHAI SP MOI - ok\Bieu mau\M01-Yeu cau san xuat mau.doc
+M02-Ket qua thu nghiem mau bao bi.doc,M02 Ket qua thu nghiem mau bao bi,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\04-QT TRIEN KHAI SP MOI - ok\Bieu mau\M02-Ket qua thu nghiem mau bao bi.doc
+M03-Thong tin sp moi.doc,M03 Thong tin sp moi,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\04-QT TRIEN KHAI SP MOI - ok\Bieu mau\M03-Thong tin sp moi.doc
+M04-danh sach SP mau.xls,M04 danh sach SP mau,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\04-QT TRIEN KHAI SP MOI - ok\Bieu mau\M04-danh sach SP mau.xls
+M01-Ket qua thu nghiem mau NVL.doc,M01 Ket qua thu nghiem mau NVL,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\05-QT THU NGHIEM NVL MOI-ok\M01-Ket qua thu nghiem mau NVL.doc
+QT THU NGHIEM NVL MOI.doc,QT THU NGHIEM NVL MOI,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\05-QT THU NGHIEM NVL MOI-ok\QT THU NGHIEM NVL MOI.doc
+M01-Danh sach quan ly truc in.xls,M01 Danh sach quan ly truc in,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\06-QT QUAN LY TRUC IN\M01-Danh sach quan ly truc in.xls
+M02-Phieu de nghi sua truc.doc,M02 Phieu de nghi sua truc,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\06-QT QUAN LY TRUC IN\M02-Phieu de nghi sua truc.doc
+M03-Phieu de nghi xuat truc-Sua.doc,M03 Phieu de nghi xuat truc Sua,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\06-QT QUAN LY TRUC IN\M03-Phieu de nghi xuat truc-Sua.doc
+M03-Phieu de nghi xuat truc-TRA.doc,M03 Phieu de nghi xuat truc TRA,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\06-QT QUAN LY TRUC IN\M03-Phieu de nghi xuat truc-TRA.doc
+M04-danh sach truc in sua - lam moi.xlsx,M04 danh sach truc in sua   lam moi,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\06-QT QUAN LY TRUC IN\M04-danh sach truc in sua - lam moi.xlsx
+QT QUAN LY TRUC IN.doc,QT QUAN LY TRUC IN,Quy trình,Chưa xác định,13-NHA MAY\04-KY THUAT\06-QT QUAN LY TRUC IN\QT QUAN LY TRUC IN.doc
+QUD01-Quy chuan chieu dai truc in.docx,QUD01 Quy chuan chieu dai truc in,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\QUD01-Quy chuan chieu dai truc in.docx
+QUD02-quy dinh kiem tra keo- corona mang ghep.doc,QUD02 quy dinh kiem tra keo  corona mang ghep,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\QUD02-quy dinh kiem tra keo- corona mang ghep.doc
+QUD03-quy dinh ghep.doc,QUD03 quy dinh ghep,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\QUD03-quy dinh ghep.doc
+QUD04-QD kiem tra chat luong ( cập nhật ).doc,QUD04 QD kiem tra chat luong ( cập nhật ),Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\QUD04-QD kiem tra chat luong ( cập nhật ).doc
+QUD04-QD kiem tra chat luong.doc,QUD04 QD kiem tra chat luong,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\QUD04-QD kiem tra chat luong.doc
+Báo cáo theo dõi hạn sử dụng.docx,Báo cáo theo dõi hạn sử dụng,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\08-HUONG DAN -HAN SU DUNG\Báo cáo theo dõi hạn sử dụng.docx
+CHUONG TRINH THAM TRA HSD.xlsx,CHUONG TRINH THAM TRA HSD,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\08-HUONG DAN -HAN SU DUNG\CHUONG TRINH THAM TRA HSD.xlsx
+Huong dantheo doi han su dung.docx,Huong dantheo doi han su dung,Tài liệu khác,Chưa xác định,13-NHA MAY\04-KY THUAT\07-Cac huong dan\08-HUONG DAN -HAN SU DUNG\Huong dantheo doi han su dung.docx
+BAN VE ISO NHA XUONG.pdf,BAN VE ISO NHA XUONG.pdf,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\1-SO DO MAT BANG\BAN VE ISO NHA XUONG.pdf
+BanVeMatBang-TaLo-220706.pdf,BanVeMatBang TaLo 220706.pdf,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\1-SO DO MAT BANG\BanVeMatBang-TaLo-220706.pdf
+SO DO VI TRI DEN CHIEU SANG.pdf,SO DO VI TRI DEN CHIEU SANG.pdf,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\1-SO DO MAT BANG\SO DO VI TRI DEN CHIEU SANG.pdf
+01-MTSP PET-MPET-PE.docx,01 MTSP PET MPET PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2022\01-MTSP PET-MPET-PE.docx
+02-MTSP PET-Al-PE.docx,02 MTSP PET Al PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2022\02-MTSP PET-Al-PE.docx
+03-MTSP OPP-PE.docx,03 MTSP OPP PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2022\03-MTSP OPP-PE.docx
+04-MTSP OPP-MCPP.docx,04 MTSP OPP MCPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2022\04-MTSP OPP-MCPP.docx
+05-MTSP OPP-CPP.docx,05 MTSP OPP CPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2022\05-MTSP OPP-CPP.docx
+06-MTSP PA-PE.docx,06 MTSP PA PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2022\06-MTSP PA-PE.docx
+01-MTSP PET-MPET-PE.docx,01 MTSP PET MPET PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\01-MTSP PET-MPET-PE.docx
+02-MTSP PET-Al-PE.docx,02 MTSP PET Al PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\02-MTSP PET-Al-PE.docx
+03-MTSP OPP-PE.docx,03 MTSP OPP PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\03-MTSP OPP-PE.docx
+04-MTSP OPP-MCPP.docx,04 MTSP OPP MCPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\04-MTSP OPP-MCPP.docx
+05-MTSP OPP-CPP.docx,05 MTSP OPP CPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\05-MTSP OPP-CPP.docx
+06-MTSP PA-PE.docx,06 MTSP PA PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\06-MTSP PA-PE.docx
+07-MTSP OPP-MPET-PE.docx,07 MTSP OPP MPET PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\07-MTSP OPP-MPET-PE.docx
+08-MTSP OPP-AL-PE.docx,08 MTSP OPP AL PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\08-MTSP OPP-AL-PE.docx
+09-MTSP PET-PE.docx,09 MTSP PET PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\09-MTSP PET-PE.docx
+10-MTSP PET-PA-PE.docx,10 MTSP PET PA PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\10-MTSP PET-PA-PE.docx
+11-MTSP PET-CPP.docx,11 MTSP PET CPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2023\11-MTSP PET-CPP.docx
+01-MTSP PET-MPET-PE.docx,01 MTSP PET MPET PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\01-MTSP PET-MPET-PE.docx
+02-MTSP PET-Al-PE.docx,02 MTSP PET Al PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\02-MTSP PET-Al-PE.docx
+03-MTSP OPP-PE.docx,03 MTSP OPP PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\03-MTSP OPP-PE.docx
+04-MTSP OPP-MCPP.docx,04 MTSP OPP MCPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\04-MTSP OPP-MCPP.docx
+05-MTSP OPP-CPP.docx,05 MTSP OPP CPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\05-MTSP OPP-CPP.docx
+06-MTSP PA-PE.docx,06 MTSP PA PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\06-MTSP PA-PE.docx
+07-MTSP OPP-MPET-PE.docx,07 MTSP OPP MPET PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\07-MTSP OPP-MPET-PE.docx
+08-MTSP OPP-AL-PE.docx,08 MTSP OPP AL PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\08-MTSP OPP-AL-PE.docx
+09-MTSP PET-PE.docx,09 MTSP PET PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\09-MTSP PET-PE.docx
+10-MTSP PET-PA-PE.docx,10 MTSP PET PA PE,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\10-MTSP PET-PA-PE.docx
+11-MTSP PET-CPP.docx,11 MTSP PET CPP,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\2-MO TA SAN PHAM - GMP\Nam-2024\11-MTSP PET-CPP.docx
+SSOP 01 - AN TOAN NGUON NUOC.doc,SSOP 01   AN TOAN NGUON NUOC,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-01-An-toan-nguon-nuoc ok\SSOP 01 - AN TOAN NGUON NUOC.doc
+1.bangdanhgia5S_cac bo phan.xls,1.bangdanhgia5S cac bo phan,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-02-be mat tiep xuc san pham-ok\1.bangdanhgia5S_cac bo phan.xls
+2.checklist SSOP be mat tiep xuc - may thoi-ghep-chia-in-tui.xlsx,2.checklist SSOP be mat tiep xuc   may thoi ghep chia in tui,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-02-be mat tiep xuc san pham-ok\2.checklist SSOP be mat tiep xuc - may thoi-ghep-chia-in-tui.xlsx
+SSOP 02 - AN TOAN CAC BE MAT TIEP XUC SAN PHAM1.doc,SSOP 02   AN TOAN CAC BE MAT TIEP XUC SAN PHAM1,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-02-be mat tiep xuc san pham-ok\SSOP 02 - AN TOAN CAC BE MAT TIEP XUC SAN PHAM1.doc
+SSOP 03 NGAN NGUA SU NHIEM CHEO NEW.doc,SSOP 03 NGAN NGUA SU NHIEM CHEO NEW,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-03-ngan ngua nhiem cheo ok\SSOP 03 NGAN NGUA SU NHIEM CHEO NEW.doc
+02-BM-Kiem-tra-VSCN-hang-ngay.doc,02 BM Kiem tra VSCN hang ngay,Biểu mẫu,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-04-Ve-sinh-ca-nhan ok\02-BM-Kiem-tra-VSCN-hang-ngay.doc
+SSOP-04-Ve-sinh-ca-nhan.doc,SSOP 04 Ve sinh ca nhan,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-04-Ve-sinh-ca-nhan ok\SSOP-04-Ve-sinh-ca-nhan.doc
+M01- Ve-sinh-nha-xuong.doc,M01  Ve sinh nha xuong,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-05-phong tranh tac nhan lay nhiem\M01- Ve-sinh-nha-xuong.doc
+M02-Ve-sinh-loi di nha-xuong.doc,M02 Ve sinh loi di nha xuong,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-05-phong tranh tac nhan lay nhiem\M02-Ve-sinh-loi di nha-xuong.doc
+SSOP 05 - BAO VE SAN PHAM TRANH CAC TAC NHAN LAY NHIEM.doc,SSOP 05   BAO VE SAN PHAM TRANH CAC TAC NHAN LAY NHIEM,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-05-phong tranh tac nhan lay nhiem\SSOP 05 - BAO VE SAN PHAM TRANH CAC TAC NHAN LAY NHIEM.doc
+BIEU MAU GIAM SAT VE SINH BAO QUAN KHO HOA CHAT.doc,BIEU MAU GIAM SAT VE SINH BAO QUAN KHO HOA CHAT,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-06-quan ly hoa chat ok\BIEU MAU GIAM SAT VE SINH BAO QUAN KHO HOA CHAT.doc
+SSOP 06 QUAN LY HOA CHAT.doc,SSOP 06 QUAN LY HOA CHAT,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-06-quan ly hoa chat ok\SSOP 06 QUAN LY HOA CHAT.doc
+F01-BM-Theo-doi-suc-khoe-cn.doc,F01 BM Theo doi suc khoe cn,Biểu mẫu,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-07-Suc-khoe-cong-nhan ok\F01-BM-Theo-doi-suc-khoe-cn.doc
+SSOP-07-Kiem-tra-suc-khoe-nhan-vien.doc,SSOP 07 Kiem tra suc khoe nhan vien,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-07-Suc-khoe-cong-nhan ok\SSOP-07-Kiem-tra-suc-khoe-nhan-vien.doc
+M01-ke hoach diet dong vat gay hai.docx,M01 ke hoach diet dong vat gay hai,Kế hoạch,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-08-Dong-vat-gay-hai ok\M01-ke hoach diet dong vat gay hai.docx
+M02-Kiem tra den diet con trung.doc,M02 Kiem tra den diet con trung,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-08-Dong-vat-gay-hai ok\M02-Kiem tra den diet con trung.doc
+M03-giam sat con trung.doc,M03 giam sat con trung,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-08-Dong-vat-gay-hai ok\M03-giam sat con trung.doc
+M04-Bao cao theo doi bay chuot.docx,M04 Bao cao theo doi bay chuot,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-08-Dong-vat-gay-hai ok\M04-Bao cao theo doi bay chuot.docx
+SSOP-08-Kiem-soat-con-trung-dong-vat-gay-hai.doc,SSOP 08 Kiem soat con trung dong vat gay hai,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-08-Dong-vat-gay-hai ok\SSOP-08-Kiem-soat-con-trung-dong-vat-gay-hai.doc
+SSOP-09-Kiem-soat-rac-thac-ve-sinh.doc,SSOP 09 Kiem soat rac thac ve sinh,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-09-Quan-ly-chat-thai 0k\SSOP-09-Kiem-soat-rac-thac-ve-sinh.doc
+M01-GIAM SAT CUA KINH.docx,M01 GIAM SAT CUA KINH,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-10 - thuy tinh vat la OK\M01-GIAM SAT CUA KINH.docx
+M02-theo dõi dụng cụ cắt gọt.xlsx,M02 theo dõi dụng cụ cắt gọt,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-10 - thuy tinh vat la OK\M02-theo dõi dụng cụ cắt gọt.xlsx
+TTT-QA-12 QUAN LY THUY TINH - VAT LA.doc,TTT QA 12 QUAN LY THUY TINH   VAT LA,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-10 - thuy tinh vat la OK\TTT-QA-12 QUAN LY THUY TINH - VAT LA.doc
+SSOP-11-Qui dinh giat ui.docx,SSOP 11 Qui dinh giat ui,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-11-Qui-dinh-giat-ui ok\SSOP-11-Qui dinh giat ui.docx
+SSOP 12 - Tinh huong khan cap.doc,SSOP 12   Tinh huong khan cap,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\3-SSOP\SSOP-12-Tinh-huong-khan-cap ok\SSOP 12 - Tinh huong khan cap.doc
+Quy trinh phân tich moi nguy.doc,Quy trinh phân tich moi nguy,Quy trình,Chưa xác định,14-AN TOAN THUC PHAM\4-HACCP\Quy trinh phân tich moi nguy.doc
+Bang phan tich moi nguy 2022.xlsx,Bang phan tich moi nguy 2022,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\4-HACCP\2022\Bang phan tich moi nguy 2022.xlsx
+ke hoach HACCP 2022.xls,ke hoach HACCP 2022,Kế hoạch,Chưa xác định,14-AN TOAN THUC PHAM\4-HACCP\2022\ke hoach HACCP 2022.xls
+Bang phan tich moi nguy 2023.xlsx,Bang phan tich moi nguy 2023,Tài liệu khác,Chưa xác định,14-AN TOAN THUC PHAM\4-HACCP\2023\Bang phan tich moi nguy 2023.xlsx
+ke hoach HACCP-2023.xls,ke hoach HACCP 2023,Kế hoạch,Chưa xác định,14-AN TOAN THUC PHAM\4-HACCP\2023\ke hoach HACCP-2023.xls
