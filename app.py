@@ -6,7 +6,7 @@ import pandas as pd
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # Khởi tạo model Gemini Pro
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("models/gemini-pro")
 
 # Giao diện người dùng
 st.title("📄 Chatbot ISO – TALOPACK (Gemini)")
