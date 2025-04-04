@@ -1,1 +1,33 @@
+import os
+import csv
 
+# Đường dẫn đến thư mục gốc của hệ thống ISO
+root_folder = "01-ISO9001-2015 SYSTEM TLP"
+
+# Danh sách giả lập (đã được tạo từ sơ đồ) – trong thực tế bạn sẽ dùng os.walk nếu có thư mục thật
+# Ở đây, ta sẽ tạo một vài dòng mô phỏng dữ liệu CSV
+
+# Mô phỏng một số đường dẫn và tên file từ sơ đồ thư mục đã cho
+file_paths = [
+    "01-ISO9001-2015 SYSTEM TLP/01-TAI LIEU ISO 9001-2015/Biểu mẫu/01 NHẬT KÝ MÁY INForm mẫu.xlsx.xlsx",
+    "01-ISO9001-2015 SYSTEM TLP/01-TAI LIEU ISO 9001-2015/Kế hoạch/KE HOACH THỰC HIỆN 2024 -KHO.xlsx",
+    "01-ISO9001-2015 SYSTEM TLP/03-HO SO ISO 9001-2015/01-BAO CAO THANG/Nam 2023/BAO-CAO-TH5/BAO-CAO-MUA-HANG-THANG-05.docx",
+    "01-ISO9001-2015 SYSTEM TLP/02-TAI LIEU BEN NGOAI ISO 9001-2015/01-LUAT LAO DONG/LUAT-ATVSLĐ84_2015_QH13.doc",
+    "01-ISO9001-2015 SYSTEM TLP/01-TAI LIEU ISO 9001-2015/Mục tiêu/Muc tieu chat luong - ATVSTP cong ty 2023.doc"
+]
+
+# Tạo danh sách dữ liệu cho CSV
+csv_data = [["Folder", "Filename", "Extension", "Full Path"]]
+for path in file_paths:
+    folder = os.path.dirname(path)
+    filename = os.path.basename(path)
+    name, ext = os.path.splitext(filename)
+    csv_data.append([folder, name, ext, path])
+
+# Ghi vào file CSV
+csv_path = "/mnt/data/iso_document_index.csv"
+with open(csv_path, mode='w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerows(csv_data)
+
+csv_path
